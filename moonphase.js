@@ -53,42 +53,42 @@ function getMoonPhase(date) {
         case phase === 0:
             phaseName = "New Moon";
             phaseNamech = "新月";
-            phaseIcon = "/WISproject/img/moon_phase/moon1.png";
+            phaseIcon = "img/moon_phase/moon1.png";
             break;
         case phase > 0 && phase < 0.25:
             phaseName = "Waxing Crescent";
             phaseNamech = "蛾眉月";
-            phaseIcon = "/WISproject/img/moon_phase/moon2.png";
+            phaseIcon = "img/moon_phase/moon2.png";
             break;
         case phase === 0.25:
             phaseName = "First Quarter";
             phaseNamech = "上弦月";
-            phaseIcon = "/WISproject/img/moon_phase/moon3.png";
+            phaseIcon = "img/moon_phase/moon3.png";
             break;
         case phase > 0.25 && phase < 0.5:
             phaseName = "Waxing Gibbous";
             phaseNamech = "盈凸月";
-            phaseIcon = "/WISproject/img/moon_phase/moon4.png";
+            phaseIcon = "img/moon_phase/moon4.png";
             break;
         case phase === 0.5:
             phaseName = "Full Moon";
             phaseNamech = "滿月";
-            phaseIcon = "/WISproject/img/moon_phase/moon5.png";
+            phaseIcon = "img/moon_phase/moon5.png";
             break;
         case phase > 0.5 && phase < 0.75:
             phaseName = "Waning Gibbous";
             phaseNamech = "虧凸月";
-            phaseIcon = "/WISproject/img/moon_phase/moon6.png";
+            phaseIcon = "img/moon_phase/moon6.png";
             break;
         case phase === 0.75:
             phaseName = "Last Quarter";
             phaseNamech = "下弦月";
-            phaseIcon = "/WISproject/img/moon_phase/moon7.png";
+            phaseIcon = "img/moon_phase/moon7.png";
             break;
         case phase > 0.75 && phase < 1:
             phaseName = "Waning Crescent";
             phaseNamech = "殘月";
-            phaseIcon = "/WISproject/img/moon_phase/moon8.png";
+            phaseIcon = "img/moon_phase/moon8.png";
             break;
         default:
             phaseName = "";

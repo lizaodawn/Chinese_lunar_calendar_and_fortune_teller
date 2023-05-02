@@ -1,13 +1,13 @@
 @font-face {
     font-family: 'engfont';
-    src: url('/WISproject/font/Hatton-Semibold.otf') format('opentype');
+    src: url('font/Hatton-Semibold.otf') format('opentype');
     font-weight: normal;
     font-style: normal;
 }
 
 @font-face {
     font-family: 'chifont';
-    src: url('/WISproject/font/dejima.ttf') format('truetype');
+    src: url('font/dejima.ttf') format('truetype');
     font-weight: normal;
     font-style: normal;
 }
@@ -23,7 +23,7 @@ html, body {
 
 body {
     font-family: 'engfont', sans-serif;
-    background-image: url('/WISproject/img/background.png');
+    background-image: url('img/background.png');
     background-repeat: no-repeat;
     background-size: cover;
     height: 100vh;

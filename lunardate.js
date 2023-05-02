@@ -2,18 +2,18 @@ function updateLunarDate(date) {
     let lunarDate = solarlunar.solar2lunar(date.getFullYear(), date.getMonth() + 1, date.getDate());
 
     const animalTranslations = {
-        '鼠': {name: 'Rat', img: '/WISproject/img/zodiac/rat.png'},
-        '牛': {name: 'Ox', img: '/WISproject/img/zodiac/ox.png'},
-        '虎': {name: 'Tiger', img: '/WISproject/img/zodiac/tiger.png'},
-        '兔': {name: 'Rabbit', img: '/WISproject/img/zodiac/rabbit.png'},
-        '龙': {name: 'Dragon', img: '/WISproject/img/zodiac/dragon.png'},
-        '蛇': {name: 'Snake', img: '/WISproject/img/zodiac/snake.png'},
-        '马': {name: 'Horse', img: '/WISproject/img/zodiac/horse.png'},
-        '羊': {name: 'Sheep', img: '/WISproject/img/zodiac/sheep.png'},
-        '猴': {name: 'Monkey', img: '/WISproject/img/zodiac/monkey.png'},
-        '鸡': {name: 'Rooster', img: '/WISproject/img/zodiac/rooster.png'},
-        '狗': {name: 'Dog', img: '/WISproject/img/zodiac/dog.png'},
-        '猪': {name: 'Pig', img: '/WISproject/img/zodiac/pig.png'}
+        '鼠': {name: 'Rat', img: 'img/zodiac/rat.png'},
+        '牛': {name: 'Ox', img: 'img/zodiac/ox.png'},
+        '虎': {name: 'Tiger', img: 'img/zodiac/tiger.png'},
+        '兔': {name: 'Rabbit', img: 'img/zodiac/rabbit.png'},
+        '龙': {name: 'Dragon', img: 'img/zodiac/dragon.png'},
+        '蛇': {name: 'Snake', img: 'img/zodiac/snake.png'},
+        '马': {name: 'Horse', img: 'img/zodiac/horse.png'},
+        '羊': {name: 'Sheep', img: 'img/zodiac/sheep.png'},
+        '猴': {name: 'Monkey', img: 'img/zodiac/monkey.png'},
+        '鸡': {name: 'Rooster', img: 'img/zodiac/rooster.png'},
+        '狗': {name: 'Dog', img: 'img/zodiac/dog.png'},
+        '猪': {name: 'Pig', img: 'img/zodiac/pig.png'}
     };
     const zodiacTranslation = animalTranslations[lunarDate.animal];
     const zodiacName = zodiacTranslation.name;
