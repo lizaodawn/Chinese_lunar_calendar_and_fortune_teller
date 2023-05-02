@@ -1,3 +1,21 @@
+:root {
+    --primary-color: #9E2C36;
+    /*    --primary-color-darker: #6f168d;
+        --primary-color-darkest: #60107a;
+
+        --neutral-color: #e8e7e7;
+
+        --white: #f7f7f8;
+        --black: #1e1e1f;
+
+        --shadow-normal: rgba(100, 100, 111, 0.1) 0px 4px 8px 0px;
+        --shadow-large: rgba(100, 100, 111, 0.2) 0px 7px 19px 0px;
+        --border-radius: 8px;
+        --spacing-normal: 8px;
+        --spacing-large: 12px;*/
+}
+
+
 @font-face {
     font-family: 'engfont';
     src: url('font/Hatton-Semibold.otf') format('opentype');
@@ -352,7 +370,7 @@ h6 {
     margin-bottom: 0.6em;
 }
 
-.zodiac-image {
+#zodiac-image {
     width: 6em;
 }
 

@@ -58,7 +58,7 @@ function getSolarTermEffect(date) {
             if (lastMonth === 12) {
                 lastMonthTermDate = new Date(lastYear, 11, solarlunar.getTerm(lastYear, 24));
             } else {
-                lastMonthTermDate = new Date(lastYear, lastMonth - 1, solarlunar.getTerm(lastYear, lastMonth + 4));
+                lastMonthTermDate = new Date(lastYear, lastMonth - 1, solarlunar.getTerm(lastYear, month * 2 - 2));
             }
             displayterm1 = lastMonthSolarTerm;
             displayterm2 = solarTerm1;
