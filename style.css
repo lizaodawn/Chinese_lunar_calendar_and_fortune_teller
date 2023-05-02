@@ -1,0 +1,213 @@
+#wholePage {
+    position: absolute;
+    height: 680px;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+
+    overflow: auto;
+
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+}
+
+@media screen and (max-width: 1280px) {
+    #wholePage {
+        width: 1280px;
+    }
+}
+
+#header {
+    height: 40px;
+
+    background: rgb(221, 87, 76);
+
+    display: flex;
+    align-items: center;
+}
+
+#link {
+    width: 200px;
+
+    display:flex;
+    justify-content: flex-end;
+    align-items: center;
+    gap: 10px;
+}
+
+#homePage, #drawLots, #info {
+    color: rgb(255, 255, 255);
+    font-size: 16px;
+    text-align: center;
+}
+
+#title {
+    margin: 40px;
+    height: fit-content;
+
+    color: rgb(150, 150, 150);
+    font-size: 48px;
+    text-align: center;
+}
+
+#mainPart {
+    flex-grow: 1;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#calculation {
+    width: 30%;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+#birthday {
+    margin: 10px;
+
+    color: rgb(221, 87, 76);
+    font-size: 24px;
+    text-align: center;
+}
+
+#insertBox {
+    margin: 10px;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+}
+
+.birth {
+    width: 100px;
+    height: 20px;
+}
+
+#birthtime {
+    margin: 10px;
+
+    color: rgb(221, 87, 76);
+    font-size: 24px;
+    text-align: center;
+}
+
+#timeChoose {
+    width: 100%;
+    margin: 10px;
+
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+}
+
+.time {
+    width: calc(100% / 4);
+
+    color: rgb(150, 150, 150);
+    font-size: 12px;
+    text-align: center;
+
+    background: transparent;
+    border: 1px solid rgb(150, 150, 150);
+}
+
+.time:hover{
+    background-color: rgb(150, 150, 150);
+    color: #fff;
+}
+
+.time.active {
+    background-color: rgb(150, 150, 150);
+    color: #fff;
+}
+
+#calculateBtn {
+    margin: 10px;
+    width: 150px;
+    height: 50px;
+
+    color: rgb(255, 255, 255);
+    font-size: 24px;
+    text-align: center;
+
+    background: rgb(221, 87, 76);
+
+    border-radius: 10px;
+    border-color: transparent;
+}
+
+#calculateBtn:hover {
+    box-shadow: 0 4px 4px rgba(0, 0, 0, 0.25);
+}
+
+#calculateBtn:active {
+    margin: 12.5px;
+    width: 145px;
+    height: 45px;
+}
+
+#result {
+    width: 40%;
+
+    display: flex;
+    align-items: center;
+    flex-direction: row;
+}
+
+#scroll {
+    margin-top: 8px;
+}
+
+#telling {
+    width: 5%;
+    height: 380px;
+    box-sizing: border-box;
+
+    background: rgb(255, 255, 255);
+    border-top: 25px solid rgb(221, 87, 76);
+    border-right: 25px solid rgb(221, 87, 76);
+    border-bottom: 25px solid rgb(221, 87, 76);
+    box-shadow: 0 4px 4px rgba(0, 0, 0, 0.25);
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+
+    overflow: hidden;
+}
+
+#telling.show {
+    width: 85%;
+    transition: 0.5s;
+}
+
+#telling.hide {
+    width: 5%;
+    transition: 0.5s;
+}
+
+#telling p {
+    margin: 10px;
+
+    color: rgb(150, 150, 150);
+    font-size: 20px;
+    text-align: center;
+    white-space: nowrap;
+}
+
+#weight {
+    color: rgb(221, 87, 76) !important;
+    font-size: 36px !important;
+    font-weight: 700 !important;
+}
