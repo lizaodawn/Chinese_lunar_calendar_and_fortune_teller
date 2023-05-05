@@ -22,7 +22,7 @@
 #header {
     height: 40px;
 
-    background: rgb(221, 87, 76);
+    background: var(--primary-color);
 
     display: flex;
     align-items: center;
@@ -72,7 +72,7 @@
 #birthday {
     margin: 10px;
 
-    color: rgb(221, 87, 76);
+    color: var(--primary-color)
     font-size: 24px;
     text-align: center;
 }
@@ -94,7 +94,7 @@
 #birthtime {
     margin: 10px;
 
-    color: rgb(221, 87, 76);
+    color: var(--primary-color);
     font-size: 24px;
     text-align: center;
 }
@@ -140,7 +140,7 @@
     font-size: 24px;
     text-align: center;
 
-    background: rgb(221, 87, 76);
+    background: var(--primary-color);
 
     border-radius: 10px;
     border-color: transparent;
@@ -174,9 +174,9 @@
     box-sizing: border-box;
 
     background: rgb(255, 255, 255);
-    border-top: 25px solid rgb(221, 87, 76);
-    border-right: 25px solid rgb(221, 87, 76);
-    border-bottom: 25px solid rgb(221, 87, 76);
+    border-top: 25px solid var(--primary-color);
+    border-right: 25px solid var(--primary-color);
+    border-bottom: 25px solid var(--primary-color);
     box-shadow: 0 4px 4px rgba(0, 0, 0, 0.25);
 
     display: flex;
@@ -207,7 +207,7 @@
 }
 
 #weight {
-    color: rgb(221, 87, 76) !important;
+    color: var(--primary-color) !important;
     font-size: 36px !important;
     font-weight: 700 !important;
 }
