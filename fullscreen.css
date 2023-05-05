@@ -1,35 +1,3 @@
-:root {
-    --primary-color: #9E2C36;
-    /*    --primary-color-darker: #6f168d;
-        --primary-color-darkest: #60107a;
-
-        --neutral-color: #e8e7e7;
-
-        --white: #f7f7f8;
-        --black: #1e1e1f;
-
-        --shadow-normal: rgba(100, 100, 111, 0.1) 0px 4px 8px 0px;
-        --shadow-large: rgba(100, 100, 111, 0.2) 0px 7px 19px 0px;
-        --border-radius: 8px;
-        --spacing-normal: 8px;
-        --spacing-large: 12px;*/
-}
-
-
-@font-face {
-    font-family: 'engfont';
-    src: url('font/Hatton-Semibold.otf') format('opentype');
-    font-weight: normal;
-    font-style: normal;
-}
-
-@font-face {
-    font-family: 'chifont';
-    src: url('font/dejima.ttf') format('truetype');
-    font-weight: normal;
-    font-style: normal;
-}
-
 * {
     box-sizing: border-box;
 }
@@ -41,9 +9,6 @@ html, body {
 
 body {
     font-family: 'engfont', sans-serif;
-    background-image: url('img/background.png');
-    background-repeat: no-repeat;
-    background-size: cover;
     height: 100vh;
     overflow: auto;
 }
@@ -104,7 +69,7 @@ h1 {
 }
 
 .date {
-    background: #9E2C36;
+    background: var(--primary-color);
 }
 
 p {
@@ -136,7 +101,7 @@ p {
 }
 
 .termnphasecontent {
-    color: #564145;
+    color: var(--dark);
     display: flex;
     justify-content: space-between;
     align-items: flex-start;
@@ -145,11 +110,11 @@ p {
 
 .termdes {
     margin-top: 5px;
-    color: #564145;
+    color: var(--dark);
 }
 
 .termcontent {
-    color: #A86372;
+    color: var(--primary-color-lighter);
 }
 
 .card-link {
@@ -159,15 +124,15 @@ p {
 }
 
 .card-link a {
-    color: #9E2C36;
+    color: var(--primary-color);
 }
 
 .card-link a:hover {
-    color: #A86372;
+    color: var(--primary-color-lighter);
 }
 
 .card-link a:active {
-    color: #9D3004;
+    color: var(--primary-color-darker);
 }
 
 h6 {

@@ -1,0 +1,43 @@
+:root {
+    --primary-color: #9E2C36;
+    --primary-color-lighter: #A86372;
+    --primary-color-lightest: #BD817F;
+    --primary-color-darker: #9D3004;
+    --dark: #564145;
+    /*    --primary-color-darker: #6f168d;
+        --primary-color-darkest: #60107a;
+
+        --neutral-color: #e8e7e7;
+
+        --white: #f7f7f8;
+        --black: #1e1e1f;
+
+        --shadow-normal: rgba(100, 100, 111, 0.1) 0px 4px 8px 0px;
+        --shadow-large: rgba(100, 100, 111, 0.2) 0px 7px 19px 0px;
+        --border-radius: 8px;
+        --spacing-normal: 8px;
+        --spacing-large: 12px;*/
+}
+
+@font-face {
+    font-family: 'engfont';
+    src: url('font/Hatton-Semibold.otf') format('opentype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'chifont';
+    src: url('font/dejima.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+body {
+    background-image: url('img/background.png');
+    background-repeat: no-repeat;
+    background-size: cover;
+    font-family: 'engfont', sans-serif;
+}
+
+

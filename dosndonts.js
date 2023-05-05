@@ -6,7 +6,7 @@ const dosndonts = [
     "Skip a class",
     "Write a poem",
     "Tell a joke",
-    "Wear some red",
+    "Wear something red",
     "Drink no beer",
     "Do a prank",
     "Gossip",
@@ -16,8 +16,19 @@ const dosndonts = [
     "Change a wall paper",
     "Sleep all day",
     "Draw eyeliner",
-    "Have some avocados",
+    "Eat avocado",
     "Listen to jazz",
+    "Pillow fight",
+    "Have a sun bath",
+    "Have shower for 3 times",
+    "Play with 5 dogs",
+    "Make a bet",
+    "Change a bed sheet",
+    "Have a jog",
+    "Do a yoga",
+    "Call your parents",
+    "Wear a hat",
+    "Eat something crispy"
 ];
 
 const shuffledItems = dosndonts.sort(() => 0.5 - Math.random());

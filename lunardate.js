@@ -64,7 +64,7 @@ function updateLunarDate(date) {
         <p class="day">${lunarDate.lDay}</p>
         <p class="month">${lunarMonth}</p>
         <p class="year">Year of ${zodiacName}</p>
-        <img class="zodiac-image" src="${zodiacImg}" alt="pic of ${zodiacName}">
+        <img id="zodiac-image" src="${zodiacImg}" alt="pic of ${zodiacName}">
     `;
 
     return {currentdate: todayHTML, currentlunar: otherPartsHTML};
