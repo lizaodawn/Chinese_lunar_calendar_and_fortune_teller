@@ -50,42 +50,42 @@ function getMoonPhase(date) {
     let phaseName, phaseNamech, phaseIcon;
 
     switch (true) {
-        case phase === 0:
+        case phase >= 0 && phase <= 0.02:
             phaseName = "New Moon";
             phaseNamech = "新月";
             phaseIcon = "img/moon_phase/moon1.png";
             break;
-        case phase > 0 && phase < 0.25:
+        case phase > 0.02 && phase < 0.24:
             phaseName = "Waxing Crescent";
             phaseNamech = "蛾眉月";
             phaseIcon = "img/moon_phase/moon2.png";
             break;
-        case phase === 0.25:
+        case phase >= 0.24 && phase <= 0.27:
             phaseName = "First Quarter";
             phaseNamech = "上弦月";
             phaseIcon = "img/moon_phase/moon3.png";
             break;
-        case phase > 0.25 && phase < 0.5:
+        case phase > 0.27 && phase < 0.49:
             phaseName = "Waxing Gibbous";
             phaseNamech = "盈凸月";
             phaseIcon = "img/moon_phase/moon4.png";
             break;
-        case phase === 0.5:
+        case phase >= 0.49 && phase <= 0.52:
             phaseName = "Full Moon";
             phaseNamech = "滿月";
             phaseIcon = "img/moon_phase/moon5.png";
             break;
-        case phase > 0.5 && phase < 0.75:
+        case phase > 0.52 && phase < 0.74:
             phaseName = "Waning Gibbous";
             phaseNamech = "虧凸月";
             phaseIcon = "img/moon_phase/moon6.png";
             break;
-        case phase === 0.75:
+        case phase >= 0.74 && phase <= 0.77:
             phaseName = "Last Quarter";
             phaseNamech = "下弦月";
             phaseIcon = "img/moon_phase/moon7.png";
             break;
-        case phase > 0.75 && phase < 1:
+        case phase > 0.77 && phase <= 1:
             phaseName = "Waning Crescent";
             phaseNamech = "殘月";
             phaseIcon = "img/moon_phase/moon8.png";
