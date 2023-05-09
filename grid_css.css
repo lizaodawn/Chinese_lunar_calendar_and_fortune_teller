@@ -1,0 +1,240 @@
+@font-face {
+    font-family: 'dejima';
+    src: url('字体名称：dejima.ttf') format('truetype');
+    font-family: 'carbon';
+    src: url('carbon_text/CarbonText-Strong.ttf') format('truetype');
+}
+
+
+.background-image-container {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+}
+
+#header {
+    height: 40px;
+    background: var(--primary-color);
+    display: flex;
+    align-items: center;
+}
+
+
+#link {
+    width: 200px;
+
+    display:flex;
+    justify-content: flex-end;
+    align-items: center;
+    gap: 10px;
+}
+
+#homePage, #drawLots, #info {
+    color: rgb(255, 255, 255);
+    font-size: 16px;
+    text-align: center;
+}
+
+.responsive-image {
+    width: 100%;
+    height: auto;
+    display: block;
+    opacity: .6;
+}
+
+
+.div1 {
+    padding-top: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.div1 .btn {
+    margin: 5px;
+}
+
+
+.div3 {
+    position: relative;
+    margin-top: 400px;
+}
+
+
+.sidebar {
+    position: fixed;
+    top: 230px;
+    left: 60px;
+    padding: 5px;
+}
+
+.sidebar-button {
+    display: block;
+    margin-top: 40px;
+    width:120px;
+    height: 50px;
+    border: none;
+    background: none;
+    padding: 0;
+    cursor: pointer;
+
+}
+
+.sidebar-button:hover {
+    transform: scale(1.2);
+}
+
+#moon_b_img {
+    height:auto;
+    weight:120%;
+}
+
+#sun_button{
+    margin-top: 50px;
+}
+
+.menu-bar {
+    display: flex;
+    justify-content: space-between;
+    position: fixed;
+    top: 10px;
+    right: 10px;
+    padding: 5px;
+    background-color: rgba(255, 255, 255, 0.9);
+    border-radius: 4px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.15);
+}
+
+.menu-button {
+    background-color: #f1f1f1;
+    border: none;
+    padding: 8px 12px;
+    margin: 0 5px;
+    cursor: pointer;
+    border-radius: 4px;
+    transition: background-color 0.3s;
+}
+
+.menu-button:hover {
+    background-color: #ddd;
+}
+
+
+.season {
+    font-family: carbon;
+    cursor: pointer;
+    background-color: #f1f1f1;
+    padding: 10px 15px;
+    border: none;
+    border-radius: 5px;
+    text-align: center;
+    transition: background-color 0.3s;
+    margin: auto;
+}
+
+.season:hover {
+    background-color: #ddd;
+}
+
+
+.cards-container {
+    display: flex;
+    margin-left: 230px;
+    height: 550px;
+    margin-top: 10px;
+    padding: 25px 0;
+
+}
+
+.card {
+    display: flex;
+    justify-content: space-between;
+    position: relative;
+    flex-direction: column;
+    align-items: center;
+    background-color: #fff;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.15);
+    margin: 0 10px;
+    width: calc(100% /7);
+    height:auto;
+    white-space: normal;
+    box-sizing: border-box;
+}
+
+
+.card-image img {
+    position: absolute;
+    padding-top: 15px;
+    width:100%;
+    height: 90%;
+    object-fit: cover;
+}
+
+.card-image {
+    display: flex
+    width: 100%;
+    height: 140%;
+    backface-visibility: hidden;
+}
+
+.card-description {
+    padding-left: 10px;
+    padding-right:10px;
+    padding-top: 50px;
+    width: 100%;
+    height: 100%;
+    backface-visibility: hidden;
+    position: absolute;
+    top: 0;
+    left: 0;
+    box-sizing: border-box;
+    transform: rotateY(180deg);
+}
+
+.card:hover {
+    transform: scale(1.1);
+}
+
+.card-inner {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top:0;
+    left:0;
+    padding-bottom: 100%;
+    transform-style: preserve-3d;
+    transition: transform 0.6s;
+}
+
+
+
+.card_name {
+    font-family: 'dejima';
+    padding-top: 0px;
+    text-align: center;
+    z-index: 1;
+}
+
+.date {
+    padding-top: -100px;
+    margin-top: -15px;
+    font-family: 'dejima';
+}
+
+
+.card.clicked .card-inner {
+    transform: rotateY(180deg);
+}
+.card.clicked .moon_description {
+    display: block;
+}
+
+
+.highlight-name {
+    color: #f00; /* Change the color to your desired highlight color */
+}
+

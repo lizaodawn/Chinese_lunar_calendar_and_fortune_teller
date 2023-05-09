@@ -1,0 +1,485 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Explain</title>
+    <link rel="stylesheet" href="/grid_css.css">
+    <link rel="stylesheet" href="/main.css">
+    <script src="hpy_js.js" defer></script>
+    <script src="high_light_term.js" defer></script>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js" integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN" crossorigin="anonymous"></script>
+</head>
+<body>
+
+<div id="header">
+  <div id="link">
+    <a href="https://www.google.com" id="homePage">Home</a>
+    <a href="https://www.google.com" id="drawLots">Draw Lots</a>
+    <a href="https://www.google.com" id="info">Info</a>
+  </div>
+</div>
+
+<div class="background-image-container">
+  <img src="background.png" alt="Cloud_background" class="responsive-image">
+</div>
+
+<div class="sidebar">
+
+  <button id="home"  class="sidebar-button" data-link="intro.html">
+    <div class="button_image">
+      <img src="home_unselected2.svg" alt="Homepage">
+    </div>
+  </button>
+
+  <button id="sun_button" class="sidebar-button" data-link="grid.html">
+    <div class="button_image">
+      <img src="sun_button.svg" alt="Solar terms">
+    </div>
+  </button>
+
+  <button id="moon_button" class="sidebar-button" data-link="Moon_phases.html">
+    <div class="button_image">
+      <img id="moon_b_img" src="moon_button_unselected.svg" alt="Moon phases" >
+    </div>
+  </button>
+
+</div>
+
+<div class="24terms">
+
+
+  <div class="div1" id="seasons">
+    <button id="bspring" type="button" class="btn btn-primary btn-lg season" data-season="Spring">Spring</button>
+    <button id="bsummer" type="button" class="btn btn-primary btn-lg season" data-season="Summer">Summer</button>
+    <button id="bautumn" type="button" class="btn btn-primary btn-lg season" data-season="Autumn">Autumn</button>
+    <button id="bwinter" type="button" class="btn btn-primary btn-lg season" data-season="Winter">Winter</button>
+  </div>
+
+  <div class="div2" id="cards">
+
+      <div class="cards-container" id="cards-container">
+
+        <div class="card" data-season="Spring">
+          <div class="card-image">
+            <img src="njq/春/1.png" alt="lichun">
+          </div>
+
+          <div class="card_name">
+            <p>立春 Lìchūn </p>
+            <p class="date">02.04.2023</p>
+          </div>
+
+          <div class="card-description">
+            <h3>Lìchūn</h3>
+            <p>Lìchūn (立春) is one of the "Four Beginnings," which signifies that the winter season, when all things are hidden away, has passed, and we are now entering the spring season with its warm and gentle breeze, and the growth of all living things.</p>
+          </div>
+
+
+        </div>
+
+
+        <div class="card" data-season="Spring">
+          <div class="card-image">
+            <img src="njq/春/2.png" alt="Yushui">
+          </div>
+
+          <div class="card-description">
+            <h3>Yǔshuǐ</h3>
+            <p>Rain Water - 雨水 (Yǔshuǐ) The weather is changeable and unpredictable, making it one of the seasons with the coldest waves throughout the year, marked by alternating cold and warm temperatures.</p>
+          </div>
+
+          <div class="card_name">
+            <p>雨水 Yǔshuǐ</p>
+            <p class="date">02.19.2023</p>
+          </div>
+        </div>
+
+
+
+        <div class="card" data-season="Spring">
+          <div class="card-image">
+            <img src="njq/春/3.png" alt="Jingzhe">
+          </div>
+
+          <div class="card-description">
+            <h3>Jīngzhé</h3>
+            <p>Waking of Insects - 惊蛰 (Jīngzhé)  Agricultural production is closely related to the rhythms of nature, and the Waking of Insects solar term has significant importance in agriculture.</p>
+          </div>
+
+          <div class="card_name">
+            <p>驚蟄 Jīngzhé</p>
+            <p class="date">03.06.2023</p>
+          </div>
+        </div>
+
+        <div class="card" data-season="Spring">
+          <div class="card-image">
+            <img src="njq/春/4.png" alt="Chunfen">
+          </div>
+
+          <div class="card-description">
+            <h3>Chūnfēn</h3>
+            <p>Spring Equinox - 春分 (Chūnfēn) The Spring Equinox also has distinctive climatic characteristics, with warm weather, abundant rainfall, and bright sunshine.</p>
+          </div>
+
+          <div class="card_name">
+            <p>春分 Chūnfēn</p>
+            <p class="date">03.21.2023</p>
+          </div>
+        </div>
+
+        <div class="card" data-season="Spring">
+          <div class="card-image">
+            <img src="njq/春/6.png" alt="Qingming">
+          </div>
+
+          <div class="card-description">
+            <h3>Qīngmíng</h3>
+            <p>Pure Brightness - 清明 (Qīngmíng) is a solar term reflecting the changes in the natural world. During this time, the sun shines brightly, plants sprout, the air is clear and the scenery is beautiful, and all things in nature reveal a thriving and lively scene.</p>
+          </div>
+
+          <div class="card_name">
+            <p>清明 Qīngmíng</p>
+            <p class="date">04.05.2023</p>
+          </div>
+        </div>
+
+        <div class="card" data-season="Spring">
+          <div class="card-image">
+            <img src="njq/春/5.png" alt="Gǔyǔ">
+          </div>
+
+          <div class="card-description">
+            <h3>Gǔyǔ</h3>
+            <p>Grain Rain - 穀雨 (Gǔyǔ) is the last solar term of spring. Grain Rain means "rain that nurtures a hundred grains." At this time, rainfall increases significantly, and newly planted crops and seedlings in the fields need the moisture from the rain.</p>
+          </div>
+
+          <div class="card_name">
+            <p>穀雨 Gǔyǔ</p>
+            <p class="date">04.20.2023</p>
+          </div>
+        </div>
+
+
+
+        <div class="card" data-season="Summer">
+          <div class="card-image">
+            <img src="njq/夏/1.png" alt="Lìxià">
+          </div>
+
+          <div class="card-description">
+            <h3>Lìxià</h3>
+            <p>Beginning of Summer - 立夏 (Lìxià) signifying the official start of the hot season. It marks the gradual rise in temperature and the imminent arrival of hot and stormy weather.</p>
+          </div>
+
+          <div class="card_name">
+            <p>立夏 Lìxià</p>
+            <p class="date">05.06.2023</p>
+          </div>
+        </div>
+
+        <div class="card" data-season="Summer">
+          <div class="card-image">
+            <img src="njq/夏/2.png" alt="Xiǎomǎn">
+          </div>
+
+          <div class="card-description">
+            <h3>Xiǎomǎn</h3>
+            <p>Grain Buds - 小满 (Xiǎomǎn) The Grain Buds solar term signifies the beginning of the rainy season, with increasing rainfall, often featuring large-scale, persistent heavy precipitation.</p>
+          </div>
+
+          <div class="card_name">
+            <p>小滿 Xiǎomǎn</p>
+            <p class="date">05.21.2023</p>
+          </div>
+        </div>
+
+        <div class="card" data-season="Summer">
+          <div class="card-image">
+            <img src="njq/夏/3.png" alt="Mángzhòng">
+          </div>
+
+          <div class="card-description">
+            <h3>Mángzhòng</h3>
+            <p>Grain in Ear - 芒种 (Mángzhòng) The Grain in Ear solar term serves as the dividing point for planting crops, marking a busy sowing season. Farmers also call it "busy planting." After this solar term, the survival rate of crops decreases.</p>
+          </div>
+
+          <div class="card_name">
+            <p>芒種 Mángzhòng</p>
+            <p class="date">06.06.2023</p>
+          </div>
+        </div>
+
+        <div class="card" data-season="Summer">
+          <div class="card-image">
+            <img src="njq/夏/4.png" alt="Xiàzhì">
+          </div>
+
+          <div class="card-description">
+            <h3>Xiàzhì</h3>
+            <p>Summer Solstice - 夏至 (Xiàzhì) is the fourth solar term of summer. On this day, the sun shines directly on the Earth's surface at its northernmost point, almost directly over the Tropic of Cancer. At this time, daylight hours are the longest of the year in the northern hemisphere.</p>
+          </div>
+
+          <div class="card_name">
+            <p>夏至 Xiàzhì</p>
+            <p class="date">06.21.2023</p>
+          </div>
+        </div>
+
+        <div class="card" data-season="Summer">
+          <div class="card-image">
+            <img src="njq/夏/5.png" alt="Xiǎoshǔ">
+          </div>
+
+          <div class="card-description">
+            <h3>Xiǎoshǔ</h3>
+            <p>Slight Heat - 小暑 (Xiǎoshǔ) is the fifth solar term of summer, marking the official start of the hottest season. "Shu" means heat, and "xiaoshu" means slight heat, not too hot. It indicates that the weather is beginning to get hot, but it's not the hottest yet.</p>
+          </div>
+
+          <div class="card_name">
+            <p>小暑 Xiǎoshǔ</p>
+            <p class="date">07.07.2023</p>
+          </div>
+        </div>
+
+        <div class="card" data-season="Summer">
+          <div class="card-image">
+            <img src="njq/夏/6.png" alt="Dàshǔ">
+          </div>
+
+          <div class="card-description">
+            <h3>Dàshǔ</h3>
+            <p>Great Heat - 大暑 (Dàshǔ) "Shu" means heat, and "dashu" means extreme heat. Great Heat is the hottest solar term of the year, with crops growing fastest during this period.</p>
+          </div>
+
+          <div class="card_name">
+            <p>大暑 Dàshǔ</p>
+            <p class="date">07.23.2023</p>
+          </div>
+        </div>
+
+
+        <div class="card" data-season="Autumn">
+          <div class="card-image">
+            <img src="njq/秋/1.png" alt="Lìqiū">
+          </div>
+
+          <div class="card-description">
+            <h3>Lìqiū</h3>
+            <p>Beginning of Autumn - 立秋 (Lìqiū) signifies the start of autumn. The Beginning of Autumn does not mean the end of hot weather; it is still hot during this time and not until the second autumn solar term (Limit of Heat) will the heat subside. Early autumn weather remains hot.</p>
+          </div>
+
+          <div class="card_name">
+            <p>立秋 Lìqiū</p>
+            <p class="date">08.08.2023</p>
+          </div>
+        </div>
+
+        <div class="card" data-season="Autumn">
+          <div class="card-image">
+            <img src="njq/秋/2.png" alt="Chùshǔ">
+          </div>
+
+          <div class="card-description">
+            <h3>Chùshǔ</h3>
+            <p>Limit of Heat - 处暑 (Chùshǔ): Limit of Heat, also known as "End of Heat," signifies the departure of extreme heat. It indicates that the unbearable hot weather is coming to an end, and although the weather is still hot, it is on a declining trend.</p>
+          </div>
+
+          <div class="card_name">
+            <p>處暑 Chùshǔ</p>
+            <p class="date">08.23.2023</p>
+          </div>
+        </div>
+
+        <div class="card" data-season="Autumn">
+          <div class="card-image">
+            <img src="njq/秋/3.png" alt="Báilù">
+          </div>
+
+          <div class="card-description">
+            <h3>Báilù</h3>
+            <p>White Dew - 白露 (Báilù):  As the weather gradually cools down, daylight is still warm under the sun, but the temperature drops quickly as the sun sets, increasing the day-night temperature difference.</p>
+          </div>
+
+          <div class="card_name">
+            <p>白露 Báilù</p>
+            <p class="date">09.08.2023</p>
+          </div>
+        </div>
+
+        <div class="card" data-season="Autumn">
+          <div class="card-image">
+            <img src="njq/秋/4.png" alt="Qiūfēn">
+          </div>
+
+          <div class="card-description">
+            <h3>Qiūfēn</h3>
+            <p>Autumn Equinox - 秋分 (Qiūfēn): Autumn Equinox means "equal division" or "half." By the time of the Autumn Equinox, the summer heat has dissipated, the weather has cooled down, and the hot and cool climates have separated.</p>
+          </div>
+
+          <div class="card_name">
+            <p>秋分 Qiūfēn</p>
+            <p class="date">09.23.2023</p>
+          </div>
+        </div>
+
+        <div class="card" data-season="Autumn">
+          <div class="card-image">
+            <img src="njq/秋/5.png" alt="Hánlù">
+          </div>
+
+          <div class="card-description">
+            <h3>Hánlù</h3>
+            <p>Cold Dew - 寒露 (Hánlù): Cold Dew is a solar term reflecting climatic changes. Entering Cold Dew, cold air occasionally moves south, the day-night temperature difference becomes larger, and the autumn dryness becomes more noticeable.</p>
+          </div>
+
+          <div class="card_name">
+            <p>寒露 Hánlù</p>
+            <p class="date">10.08.2023</p>
+          </div>
+        </div>
+
+        <div class="card" data-season="Autumn">
+          <div class="card-image">
+            <img src="njq/秋/6.png" alt="Shuāngjiàng">
+          </div>
+
+          <div class="card-description">
+            <h3>Shuāngjiàng</h3>
+            <p>Frost's Descent - 霜降 (Shuāngjiàng): Frost's Descent solar term reflects the sudden drop in temperature, the significant change in day-night temperature difference, and the noticeable autumn dryness.</p>
+          </div>
+
+          <div class="card_name">
+            <p>霜降 Shuāngjiàng</p>
+            <p class="date">10.24.2023</p>
+          </div>
+        </div>
+
+
+
+
+        <div class="card" data-season="Winter">
+          <div class="card-image">
+            <img src="njq/冬/1.png" alt="Lìdōng">
+          </div>
+
+          <div class="card-description">
+            <h3>Lìdōng</h3>
+            <p>Beginning of Winter - 立冬 (Lìdōng): Beginning of Winter is a seasonal solar term, signifying the entrance into winter. It means that life starts to close and conserve energy, and all things enter a state of rest and storage.</p>
+          </div>
+
+          <div class="card_name">
+            <p>立冬 Lìdōng</p>
+            <p class="date">11.08.2023</p>
+          </div>
+        </div>
+
+        <div class="card" data-season="Winter">
+          <div class="card-image">
+            <img src="njq/冬/2.png" alt="Xiǎoxuě">
+          </div>
+
+          <div class="card-description">
+            <h3>Xiǎoxuě</h3>
+            <p>Slight Snow - 小雪 (Xiǎoxuě): The arrival of Slight Snow indicates that the weather will become increasingly cold, and precipitation will gradually increase.</p>
+          </div>
+
+          <div class="card_name">
+            <p>小雪 Xiǎoxuě</p>
+            <p class="date">11.22.2023</p>
+          </div>
+        </div>
+
+        <div class="card" data-season="Winter">
+          <div class="card-image">
+            <img src="njq/冬/3.png" alt="Dàxuě">
+          </div>
+
+          <div class="card-description">
+            <h3>Dàxuě</h3>
+            <p>Heavy Snow - 大雪 (Dàxuě): Heavy Snow represents the climatic characteristics during the Heavy Snow solar term, including temperature and precipitation.</p>
+          </div>
+
+          <div class="card_name">
+            <p>大雪 Dàxuě</p>
+            <p class="date">12.07.2023</p>
+          </div>
+        </div>
+
+        <div class="card" data-season="Winter">
+          <div class="card-image">
+            <img src="njq/冬/4.png" alt="Dōngzhì">
+          </div>
+
+          <div class="card-description">
+            <h3>Dōngzhì</h3>
+            <p>Winter Solstice - 冬至 (Dōngzhì): Making it the shortest day and the longest night of the year. Since today, the sun's altitude rises, and daylight gradually increases.</p>
+          </div>
+
+          <div class="card_name">
+            <p>冬至 Dōngzhì</p>
+            <p class="date">12.22.2023</p>
+          </div>
+        </div>
+
+        <div class="card" data-season="Winter">
+          <div class="card-image">
+            <img src="njq/冬/5.png" alt="Xiǎohán">
+          </div>
+
+          <div class="card-description">
+            <h3>Xiǎohán</h3>
+            <p>Slight Cold - 小寒 (Xiǎohán): Slight Cold means that the weather is cold but has not reached its extreme point. After the Winter Solstice, cold air frequently moves south, and the temperature continues to decrease.</p>
+          </div>
+
+          <div class="card_name">
+            <p>小寒 Xiǎohán</p>
+            <p class="date">01.05.2023</p>
+          </div>
+        </div>
+
+        <div class="card" data-season="Winter">
+          <div class="card-image">
+            <img src="njq/冬/6.png" alt="Dàhán">
+          </div>
+
+          <div class="card-description">
+            <h3>Dàhán</h3>
+            <p>Great Cold - 大寒 (Dàhán): Great Cold, like Slight Cold, is a solar term representing the degree of cold weather. Great Cold signifies the weather has reached its extreme cold point.</p>
+          </div>
+
+          <div class="card_name">
+            <p>大寒 Dàhán</p>
+            <p class="date">01.20.2023</p>
+          </div>
+        </div>
+
+    </div>
+
+
+      </div>
+
+  <div class="div3"></div>
+  </div>
+
+
+</div>
+<script>
+  document.querySelectorAll('.card').forEach((card) => {
+    // Create the card-inner div
+    const cardInner = document.createElement('div');
+    cardInner.className = 'card-inner';
+
+    // Move the card's children (card-image and card-description) to card-inner
+    while (card.firstChild) {
+      cardInner.appendChild(card.firstChild);
+    }
+
+    // Append card-inner to the card
+    card.appendChild(cardInner);
+  });
+</script>
+
+</body>
+</html>

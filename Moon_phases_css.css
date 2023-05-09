@@ -1,0 +1,174 @@
+
+
+
+.background-image-container {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+}
+
+.moon_card_container {
+    display: flex;
+    flex-wrap: wrap;
+    margin-top: 20px;
+    justify-content: center;
+    margin-left: 150px;
+    height: auto;
+    padding: 25px 0;
+}
+
+#header {
+    height: 40px;
+    background: var(--primary-color);
+    display: flex;
+    align-items: center;
+}
+
+#link {
+    width: 200px;
+
+    display:flex;
+    justify-content: flex-end;
+    align-items: center;
+    gap: 10px;
+}
+
+#homePage, #drawLots, #info {
+    color: rgb(255, 255, 255);
+    font-size: 16px;
+    text-align: center;
+}
+
+.moon_card {
+    display: flex;
+    position: absolute;
+    flex-direction: column;
+    align-items: center;
+    background-color: #fff;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.15);
+    margin: 0 10px;
+    width: calc(100% / 5 - 10px);
+    height: 100%;
+    white-space: normal;
+    margin-bottom: 25px;
+    justify-content: center;
+    border-radius: 0.375rem;
+}
+
+
+.card-inner {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+    position: relative;
+    transition: transform 0.5s;
+    transform-style: preserve-3d;
+}
+
+.moon_image {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 20px;
+    width: 100%;
+    height: 100%;
+    backface-visibility: hidden;
+}
+
+.name {
+    backface-visibility: hidden;
+    justify-content: center;
+    align-items: center;
+}
+
+
+
+
+.moon_img {
+    width: 75%;
+    height: 100%;
+    object-fit: cover;
+    backface-visibility: hidden;
+    justify-content: center;
+}
+
+
+.moon_description {
+    display: none;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    padding: 20px;
+    box-sizing: border-box;
+    backface-visibility: hidden;
+    transform: rotateY(180deg);
+}
+
+
+
+.moon_card.clicked .card-inner {
+    transform: rotateY(180deg);
+}
+
+.moon_card.clicked .moon_description {
+    display: block;
+}
+
+.highlighted-word {
+    color: red; /* Set the text color if needed */
+}
+
+.moon_card:not(.current) .moon_image img {
+    opacity: 0.5; /* Adjust the value as needed */
+}
+
+.sidebar {
+    position: fixed;
+    top: 230px;
+    left: 60px;
+    padding: 5px;
+}
+
+.sidebar-button {
+    display: block;
+    margin-top: 40px;
+    width:120px;
+    height: 50px;
+    border: none;
+    background: none;
+    padding: 0;
+    cursor: pointer;
+
+}
+
+.sidebar-button:hover {
+    transform: scale(1.2);
+}
+
+#moon_b_img {
+    height:auto;
+    weight:120%;
+}
+
+#sun_button{
+    margin-top: 50px;
+}
+
+@media screen and (min-width: 600px) {
+    .moon_card {
+        position:relative;
+        display: flex;
+        flex-direction: column;
+    }
+}
+
+
+
+
