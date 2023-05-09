@@ -3,7 +3,9 @@
     --primary-color-lighter: #A86372;
     --primary-color-lightest: #BD817F;
     --primary-color-darker: #9D3004;
+    --primary-color-darkest: #78001B;
     --dark: #564145;
+    --dim: #897170;
     /*    --primary-color-darker: #6f168d;
         --primary-color-darkest: #60107a;
 
@@ -37,7 +39,88 @@ body {
     background-image: url('img/background.png');
     background-repeat: no-repeat;
     background-size: cover;
-    font-family: 'engfont', sans-serif;
+    font-family: engfont, chifont, sans-serif;
+    margin: 0;
+}
+
+p {
+    font-family: engfont, chifont, sans-serif;
 }
 
 
+#header {
+    /*    display: flex;
+        justify: flex-end;
+        padding: 10px;
+        gap: 30px;*/
+    background-color: var(--primary-color);
+    /*    align-items: center;*/
+}
+
+#link {
+    display: flex;
+    justify: flex-end;
+    padding: 10px;
+    gap: 10px;
+    align-items: center;
+}
+
+.barinfo {
+    color: white;
+    font-size: 16px;
+    font-family: engfont, sans-serif;
+}
+
+.btn-primary {
+    font-family: engfont, chifont, sans-serif !important;
+}
+
+
+.btn-primary {
+    margin-top: 5px;
+    background-color: var(--dim) !important;
+    border-color: var(--dim) !important;
+}
+
+.btn-primary:hover {
+    background-color: var(--primary-color) !important;
+    border-color: var(--primary-color) !important;
+}
+
+.btn-primary:active {
+    background-color: var(--primary-color-darker) !important;
+    border-color: var(--primary-color-darker) !important;
+}
+
+.btn-primary:disabled {
+    background-color: var(--dim) !important;
+    border-color: var(--dim) !important;
+}
+
+.functionbtn {
+    margin: 10px;
+    width: 150px;
+    height: 50px;
+
+    color: white;
+    font-size: 24px;
+    text-align: center;
+
+    background: var(--primary-color);
+
+    border-radius: 10px;
+    /*    border-color: transparent;*/
+    border: none;
+    box-shadow: none;
+}
+
+.functionbtn:hover {
+    /* box-shadow: 0 4px 4px rgba(0, 0, 0, 0.25);*/
+    cursor: pointer;
+}
+
+.functionbtn:active {
+    margin: 12.5px;
+    width: 145px;
+    height: 45px;
+}

@@ -1,7 +1,6 @@
-
-    /*function generateSentence() {*/
-    // 存储十个句子的数组
-    let sentences = [
+/*function generateSentence() {*/
+// 存储十个句子的数组
+let sentences = [
     "After endless mountains and rivers that leave doubt whether there is a path out,\nsuddenly one encounters the shade of a willow, bright flowers and a lovely village.\n山重水復疑無路，柳暗花明又一村。",
     "The last one tenth of the journey demands half the effort.\nA thing is yet to be done until it is done.\n行百裏者半九十。",
     "In the face of all blows, not bending low, it still stands fast. \nWhether from east, west, south or north the wind doth blast.\n千磨萬擊還堅勁，任爾東西南北風。",
@@ -34,182 +33,192 @@
     "The mechanic, who wishes to do his work well,\n must first sharpen his tools.\n工欲善其事，必先利其器。",
     "When I walk along with two others,\nthey may serve as my teachers.\n三人行，必有我師焉。"
 
-    ];
+];
 
+// 随机选择一个句子
+//let randomIndex = Math.floor(Math.random() * sentences.length);
+//let sentence = sentences[randomIndex];
+
+// 在网页上显示句子
+//let sentenceElement=document.getElementById("sentence");
+//sentenceElement.innerHTML = sentence;
+//sentenceElement.style.textAlign="center";
+
+let main = document.getElementsByClassName("main")[0];
+
+function generateSentence() {
     // 随机选择一个句子
-    //let randomIndex = Math.floor(Math.random() * sentences.length);
-    //let sentence = sentences[randomIndex];
+    let randomIndex = Math.floor(Math.random() * sentences.length);
+    let sentence = sentences[randomIndex];
 
     // 在网页上显示句子
-    //let sentenceElement=document.getElementById("sentence");
-    //sentenceElement.innerHTML = sentence;
-    //sentenceElement.style.textAlign="center";
-
-    let main = document.getElementsByClassName("main")[0];
-
-    function generateSentence() {
-            // 随机选择一个句子
-        let randomIndex = Math.floor(Math.random() * sentences.length);
-        let sentence = sentences[randomIndex];
-
-            // 在网页上显示句子
-         let sentenceElement = document.getElementById("sentence");
-         sentenceElement.style.whiteSpace = "pre-wrap";
-         sentenceElement.innerHTML = "";
-        sentenceElement.style.width = "600px";
-        sentenceElement.style.height = "200px";
+    let sentenceElement = document.getElementById("sentence");
+    sentenceElement.style.whiteSpace = "pre-wrap";
+    sentenceElement.innerHTML = "";
+    sentenceElement.style.width = "600px";
+    sentenceElement.style.height = "200px";
 
 
-        let count = 0;
-         let words = sentence.split("");
-         let writeInterval = setInterval(function() {
-             if (words.length > 0) {
-                 let span = document.createElement("span");
-                 let letter = words.shift();
-                 span.innerHTML = letter;
-                 sentenceElement.appendChild(span);
+    let count = 0;
+    let words = sentence.split("");
+    let writeInterval = setInterval(function () {
+        if (words.length > 0) {
+            let span = document.createElement("span");
+            let letter = words.shift();
+            span.innerHTML = letter;
+            sentenceElement.appendChild(span);
 
-                 let opc = 0;
-                 let fadeInterval = setInterval(function() {
-                     opc++;
-                     span.style.opacity = opc / 10;
-                     span.style.color = "transparent";
-                     span.style.textShadow =
-                            "0 0 5px #57606f,0 0 10px #57606f,0 0 4px #57606f,0 0 12px #ffa502";
-                     span.style.filter = "blur(" + (10 / opc - 1) + "px)";
-                     if (opc >= 10) {
-                            clearInterval(fadeInterval);
-                            span.style.color = "#2f3542";
-                        }
-                    }, 50);
-                } else {
-                    clearInterval(writeInterval);
+            let opc = 0;
+            let fadeInterval = setInterval(function () {
+                opc++;
+                span.style.opacity = opc / 10;
+                span.style.color = "transparent";
+                span.style.textShadow =
+                    "0 0 5px #57606f,0 0 10px #57606f,0 0 4px #57606f,0 0 12px #ffa502";
+                span.style.filter = "blur(" + (10 / opc - 1) + "px)";
+                if (opc >= 10) {
+                    clearInterval(fadeInterval);
+                    span.style.color = "#2f3542";
                 }
             }, 50);
+        } else {
+            clearInterval(writeInterval);
+        }
+    }, 50);
 
 
-    }
+}
 
 //轮播图效果
-    class Slide{
-        constructor(){
-            this.slideBoxDOM = document.querySelector('.slide-box');
-            this.slideLeftBtnDOM = this.slideBoxDOM.querySelector(".slide-left-btn");
-            this.slideRightBtnDOM = this.slideBoxDOM.querySelector(".slide-right-btn");
-            this.bannerBoxDOM = this.slideBoxDOM.querySelector(".banner-box");
-            this.paginationBoxDOM = this.slideBoxDOM.querySelector(".pagination-box");
-            //计数器
+class Slide {
+    constructor() {
+        this.slideBoxDOM = document.querySelector('.slide-box');
+        this.slideLeftBtnDOM = this.slideBoxDOM.querySelector(".slide-left-btn");
+        this.slideRightBtnDOM = this.slideBoxDOM.querySelector(".slide-right-btn");
+        this.bannerBoxDOM = this.slideBoxDOM.querySelector(".banner-box");
+        this.paginationBoxDOM = this.slideBoxDOM.querySelector(".pagination-box");
+        //计数器
+        this._currentIndex = 0;
+        this._bannerItemDOMs = null;
+
+        //banneritemDOMs lenth
+        this._bannerItemDOMsLen = 0;
+
+        //图片对象数据
+        this.banners = [
+            {imageName: 'shutter01.jpg',},
+            {imageName: 'shutter02.jpg',},
+            {imageName: 'shutter03.jpg',},
+            {imageName: 'shutter04.jpg',},
+            {imageName: 'shutter05.jpg',},
+            {imageName: 'shutter06.jpg',},
+        ];
+        this.imageUrl = 'img/';
+
+        //定时器
+        this.timer = null;
+    };
+
+    get currentIndex() {
+        return this._currentIndex;
+    }
+
+    //监听计数器变化，根据变化来改变当前的横幅
+    set currentIndex(num) {
+        //将所有横幅归于初始
+        Object.values(this.bannerItemDOMs).forEach((item, i) => {
+            item.classList.remove('left', 'middle', 'right');
+            item.onclick = null;
+            this.paginationBoxDOM.children[i].classList.remove('chose');
+        });
+        if (num < 0) {
+            this._currentIndex = this.bannerItemDOMsLen - 1;
+        } else if (num >= this.bannerItemDOMsLen) {
             this._currentIndex = 0;
-            this._bannerItemDOMs=null;
+        } else {
+            this._currentIndex = num;
+        }
+        this.paginationBoxDOM.children[this._currentIndex].classList.add('chose');
+        if (this._currentIndex === 0) {
+            this.showCurrentBanner(this.bannerItemDOMsLen - 1, this._currentIndex, this._currentIndex + 1);
 
-            //banneritemDOMs lenth
-            this._bannerItemDOMsLen=0;
+        } else if (this._currentIndex === this.bannerItemDOMsLen - 1) {
+            this.showCurrentBanner(this._currentIndex - 1, this._currentIndex, 0)
+        } else {
+            this.showCurrentBanner(this._currentIndex - 1, this._currentIndex, this._currentIndex + 1);
+        }
+    }
 
-            //图片对象数据
-            this.banners = [
-                {imageName: 'shutter01.jpg',},
-                {imageName: 'shutter02.jpg',},
-                {imageName: 'shutter03.jpg',},
-                {imageName: 'shutter04.jpg',},
-                {imageName: 'shutter05.jpg',},
-                {imageName: 'shutter06.jpg',},
-            ];
-            this.imageUrl='./images/';
+    showCurrentBanner(leftIndex, middleIndex, rightIndex) {
+        this.bannerItemDOMs[leftIndex].classList.add('left');
+        this.bannerItemDOMs[middleIndex].classList.add('middle');
+        this.bannerItemDOMs[rightIndex].classList.add('right');
+        this.bannerItemDOMs[leftIndex].onclick = () => {
+            this._currentIndex--;
+        }
+        this.bannerItemDOMs[rightIndex].onclick = () => {
+            this._currentIndex++;
+        }
+    }
 
-            //定时器
-            this.timer=null;
-        };
-        get currentIndex(){
-            return this._currentIndex;
-        }
-        //监听计数器变化，根据变化来改变当前的横幅
-        set currentIndex(num) {
-            //将所有横幅归于初始
-            Object.values(this.bannerItemDOMs).forEach((item, i) => {
-                item.classList.remove('left', 'middle', 'right');
-                item.onclick = null;
-                this.paginationBoxDOM.children[i].classList.remove('chose');
-            });
-            if (num < 0) {
-                this._currentIndex = this.bannerItemDOMsLen - 1;
-            } else if (num >= this.bannerItemDOMsLen) {
-                this._currentIndex = 0;
-            } else {
-                this._currentIndex = num;
-            }
-            this.paginationBoxDOM.children[this._currentIndex].classList.add('chose');
-            if (this._currentIndex === 0) {
-                this.showCurrentBanner(this.bannerItemDOMsLen - 1, this._currentIndex, this._currentIndex + 1);
+    getBannerItemDOMs() {
+        return this.slideBoxDOM.querySelectorAll('.banner-item');
+    }
 
-            }else if(this._currentIndex===this.bannerItemDOMsLen - 1){
-                this.showCurrentBanner(this._currentIndex - 1,this._currentIndex,0)
-            }else {
-                this.showCurrentBanner(this._currentIndex - 1, this._currentIndex, this._currentIndex + 1);
-            }
-        }
-        showCurrentBanner(leftIndex,middleIndex,rightIndex){
-            this.bannerItemDOMs[leftIndex].classList.add('left');
-            this.bannerItemDOMs[middleIndex].classList.add('middle');
-            this.bannerItemDOMs[rightIndex].classList.add('right');
-            this.bannerItemDOMs[leftIndex].onclick=()=>{
-                this._currentIndex--;
-            }
-            this.bannerItemDOMs[rightIndex].onclick=()=>{
-                this._currentIndex++;
-            }
-        }
-        getBannerItemDOMs(){
-            return this.slideBoxDOM.querySelectorAll('.banner-item');
-        }
-        /*获取banner-itemdom字符串，用来渲染dom*/
-        getBannerItemHTML(imageName){
-            return `<div class="banner-item"><img src="${this.imageUrl + imageName}" alt=""></div>`;
-
-        }
-        drawDOM(banners){
-            this.bannerBoxDOM.innerHTML=banners.reduce((html,item)=>{
-                return html + this.getBannerItemHTML(item.imageName);
-            },'');
-            this.banners.forEach((item, i)=>{
-                const span = document.createElement('span');
-                span.addEventListener('mouseover',()=>{
-                    this._currentIndex = 1;
-                });
-                this.paginationBoxDOM.append(span);
-            });
-        }
-        //启动定时器
-        openTimer(){
-            this.timer=setInterval(()=>{
-                this.currentIndex++;
-            },3000);
-        }
-        stopTimer(){
-            clearInterval(this.timer);
-        }
-        init(){
-            this.drawDOM(this.banners);
-            this.bannerItemDOMs = this.getBannerItemDOMs();
-            this.bannerItemDOMsLen = this.bannerItemDOMs.length;
-            this.currentIndex=0;
-
-            //监听事件
-            this.slideLeftBtnDOM.addEventListener('click',()=>{
-                this.currentIndex--;
-            })
-            this.slideRightBtnDOM.addEventListener('click',()=>{
-                this.currentIndex++;
-            })
-            //自动轮播
-            this.openTimer();
-            this.slideBoxDOM.addEventListener('mouseover',()=>{
-                this.stopTimer();
-            });
-            this.slideBoxDOM.addEventListener('mouseout',()=>{
-                this.openTimer();
-            })
-        }
-
+    /*获取banner-itemdom字符串，用来渲染dom*/
+    getBannerItemHTML(imageName) {
+        return `<div class="banner-item"><img src="${this.imageUrl + imageName}" alt=""></div>`;
 
     }
-    new Slide().init();
+
+    drawDOM(banners) {
+        this.bannerBoxDOM.innerHTML = banners.reduce((html, item) => {
+            return html + this.getBannerItemHTML(item.imageName);
+        }, '');
+        this.banners.forEach((item, i) => {
+            const span = document.createElement('span');
+            span.addEventListener('mouseover', () => {
+                this._currentIndex = 1;
+            });
+            this.paginationBoxDOM.append(span);
+        });
+    }
+
+    //启动定时器
+    openTimer() {
+        this.timer = setInterval(() => {
+            this.currentIndex++;
+        }, 3000);
+    }
+
+    stopTimer() {
+        clearInterval(this.timer);
+    }
+
+    init() {
+        this.drawDOM(this.banners);
+        this.bannerItemDOMs = this.getBannerItemDOMs();
+        this.bannerItemDOMsLen = this.bannerItemDOMs.length;
+        this.currentIndex = 0;
+
+        //监听事件
+        this.slideLeftBtnDOM.addEventListener('click', () => {
+            this.currentIndex--;
+        })
+        this.slideRightBtnDOM.addEventListener('click', () => {
+            this.currentIndex++;
+        })
+        //自动轮播
+        this.openTimer();
+        this.slideBoxDOM.addEventListener('mouseover', () => {
+            this.stopTimer();
+        });
+        this.slideBoxDOM.addEventListener('mouseout', () => {
+            this.openTimer();
+        })
+    }
+
+
+}
+
+new Slide().init();

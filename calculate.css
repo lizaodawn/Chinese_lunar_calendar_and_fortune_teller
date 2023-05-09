@@ -19,7 +19,8 @@
     }
 }
 
-#header {
+
+/*#header {
     height: 40px;
 
     background: var(--primary-color);
@@ -41,7 +42,7 @@
     color: rgb(255, 255, 255);
     font-size: 16px;
     text-align: center;
-}
+}*/
 
 #title {
     margin: 40px;
@@ -119,6 +120,8 @@
 
     background: transparent;
     border: 1px solid rgb(150, 150, 150);
+
+    font-family: engfont, chifont, sans-serif;
 }
 
 .time:hover{
@@ -131,30 +134,7 @@
     color: #fff;
 }
 
-#calculateBtn {
-    margin: 10px;
-    width: 150px;
-    height: 50px;
 
-    color: rgb(255, 255, 255);
-    font-size: 24px;
-    text-align: center;
-
-    background: var(--primary-color);
-
-    border-radius: 10px;
-    border-color: transparent;
-}
-
-#calculateBtn:hover {
-    box-shadow: 0 4px 4px rgba(0, 0, 0, 0.25);
-}
-
-#calculateBtn:active {
-    margin: 12.5px;
-    width: 145px;
-    height: 45px;
-}
 
 #result {
     width: 40%;
@@ -211,3 +191,4 @@
     font-size: 36px !important;
     font-weight: 700 !important;
 }
+

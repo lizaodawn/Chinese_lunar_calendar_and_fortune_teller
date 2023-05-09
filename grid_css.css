@@ -1,9 +1,9 @@
-@font-face {
+/*@font-face {
     font-family: 'dejima';
     src: url('字体名称：dejima.ttf') format('truetype');
     font-family: 'carbon';
     src: url('carbon_text/CarbonText-Strong.ttf') format('truetype');
-}
+}*/
 
 
 .background-image-container {
@@ -15,28 +15,6 @@
     z-index: -1;
 }
 
-#header {
-    height: 40px;
-    background: var(--primary-color);
-    display: flex;
-    align-items: center;
-}
-
-
-#link {
-    width: 200px;
-
-    display:flex;
-    justify-content: flex-end;
-    align-items: center;
-    gap: 10px;
-}
-
-#homePage, #drawLots, #info {
-    color: rgb(255, 255, 255);
-    font-size: 16px;
-    text-align: center;
-}
 
 .responsive-image {
     width: 100%;
@@ -213,7 +191,7 @@
 
 
 .card_name {
-    font-family: 'dejima';
+    font-family: 'chifont';
     padding-top: 0px;
     text-align: center;
     z-index: 1;
@@ -222,7 +200,7 @@
 .date {
     padding-top: -100px;
     margin-top: -15px;
-    font-family: 'dejima';
+    font-family: 'chifont';
 }
 
 

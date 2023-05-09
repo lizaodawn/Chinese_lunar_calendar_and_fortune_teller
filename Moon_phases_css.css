@@ -1,6 +1,4 @@
 
-
-
 .background-image-container {
     position: fixed;
     top: 0;
@@ -20,27 +18,6 @@
     padding: 25px 0;
 }
 
-#header {
-    height: 40px;
-    background: var(--primary-color);
-    display: flex;
-    align-items: center;
-}
-
-#link {
-    width: 200px;
-
-    display:flex;
-    justify-content: flex-end;
-    align-items: center;
-    gap: 10px;
-}
-
-#homePage, #drawLots, #info {
-    color: rgb(255, 255, 255);
-    font-size: 16px;
-    text-align: center;
-}
 
 .moon_card {
     display: flex;
@@ -87,8 +64,6 @@
 }
 
 
-
-
 .moon_img {
     width: 75%;
     height: 100%;
@@ -110,7 +85,6 @@
     backface-visibility: hidden;
     transform: rotateY(180deg);
 }
-
 
 
 .moon_card.clicked .card-inner {
@@ -139,7 +113,7 @@
 .sidebar-button {
     display: block;
     margin-top: 40px;
-    width:120px;
+    width: 120px;
     height: 50px;
     border: none;
     background: none;
@@ -153,17 +127,17 @@
 }
 
 #moon_b_img {
-    height:auto;
-    weight:120%;
+    height: auto;
+    weight: 120%;
 }
 
-#sun_button{
+#sun_button {
     margin-top: 50px;
 }
 
 @media screen and (min-width: 600px) {
     .moon_card {
-        position:relative;
+        position: relative;
         display: flex;
         flex-direction: column;
     }

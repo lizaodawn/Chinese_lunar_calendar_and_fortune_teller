@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <title>Moon_phases</title>
     <link rel="stylesheet" href="Moon_phases_css.css">
-    <link rel="stylesheet" href="/main.css">
+    <link rel="stylesheet" href="main.css">
     <script src="https://cdnjs.cloudflare.com/ajax/libs/suncalc/1.8.0/suncalc.min.js"></script>
     <script src="Moon_phases_card_function.js" defer></script>
     <script src="Moon_phases_get.js" defer></script>
@@ -12,23 +12,23 @@
 </head>
 <body>
 
-<div class="background-image-container">
+<!--<div class="background-image-container">
     <img src="background.png" alt="Cloud_background" class="responsive-image">
-</div>
+</div>-->
 
 
-    <div id="header">
-        <div id="link">
-            <a href="https://www.google.com" id="homePage">Home</a>
-            <a href="https://www.google.com" id="drawLots">Draw Lots</a>
-            <a href="https://www.google.com" id="info">Info</a>
-        </div>
+<div id="header">
+    <div id="link">
+        <a href="mainpagefullscreen.html" class="barinfo">Home</a>
+        <a href="calculate.html" class="barinfo">Life-weight Calculator</a>
+        <a href="final-html.html" class="barinfo">Lots of Answer</a>
     </div>
+</div>
 
 
 <div class="sidebar">
 
-    <button id="home"  class="sidebar-button" data-link="intro.html">
+    <button id="home" class="sidebar-button" data-link="intro.html">
         <div class="button_image">
             <img src="home_unselected2.svg" alt="按钮图片">
         </div>
@@ -42,184 +42,192 @@
 
     <button id="moon_button" class="sidebar-button" data-link="Moon_phases.html">
         <div class="button_image">
-            <img id="moon_b_img" src="moon_button.svg" alt="按钮图片" >
+            <img id="moon_b_img" src="moon_button.svg" alt="按钮图片">
         </div>
     </button>
 
 </div>
 
 
-
 <div class="moon_card_container">
 
 
-        <div class="moon_card" id="new_moon">
-            <div class="card-inner">
-                <div class="moon_image">
-                    <img class="moon_img" src="moon_phase/0.pic.jpg" alt="">
-                </div>
-                <div class="name">
-                    <p class="name_e">New Moon </p>
-                    <p class="name_c">新月 xīn yuè</p>
-                </div>
-
-                <div class="moon_description">
-                    <p class="time"> If the new moon is visible, it is usually for a brief period of time around sunrise or sunset.</p>
-                    <p class="c_poetry">小楼<span class="highlighted-word">新月</span>，回首自纤纤。</p>
-
-                    <p class="translation">
-                        In the small building under the <span class="highlighted-word">crescent moon</span>, one looks back to see the delicate and graceful view.</p>
-                </div>
+    <div class="moon_card" id="new_moon">
+        <div class="card-inner">
+            <div class="moon_image">
+                <img class="moon_img" src="img/moon_phase/0.pic.jpg" alt="">
+            </div>
+            <div class="name">
+                <p class="name_e">New Moon </p>
+                <p class="name_c">新月 xīn yuè</p>
             </div>
 
+            <div class="moon_description">
+                <p class="time"> If the new moon is visible, it is usually for a brief period of time around sunrise or
+                    sunset.</p>
+                <p class="c_poetry">小楼<span class="highlighted-word">新月</span>，回首自纤纤。</p>
 
-
+                <p class="translation">
+                    In the small building under the <span class="highlighted-word">crescent moon</span>, one looks back
+                    to see the delicate and graceful view.</p>
+            </div>
         </div>
 
-        <div class="moon_card" id="waxing_crescent">
-            <div class="card-inner">
-                <div class="moon_image">
-                    <img class="moon_img" src="moon_phase/1.pic.jpg" alt="">
-                </div>
-                <div class="name">
-                    <p class="name_e">Waxing Crescent</p>
-                    <p class="name_c">峨眉月 é méi yuè</p>
-                </div>
 
-                <div class="moon_description">
-                    <p class="time">The crescent moon will appear in the western sky shortly after sunset.</p>
-                    <p class="c_poetry"><span class="highlighted-word">凉月如眉</span>挂柳湾</p>
-                    <p class="translation">The <span class="highlighted-word">cool moon, like an eyebrow</span>, hangs over the willow bay</p>
-                </div>
+    </div>
+
+    <div class="moon_card" id="waxing_crescent">
+        <div class="card-inner">
+            <div class="moon_image">
+                <img class="moon_img" src="img/moon_phase/1.pic.jpg" alt="">
+            </div>
+            <div class="name">
+                <p class="name_e">Waxing Crescent</p>
+                <p class="name_c">蛾眉月 é méi yuè</p>
             </div>
 
-             </div>
-
-        <div class="moon_card" id="first_quarter">
-            <div class="card-inner">
-                <div class="moon_image">
-                    <img class="moon_img" src="moon_phase/2.jpg" alt="">
-                </div>
-                <div class="name">
-                    <p class="name_e">First Quarter</p>
-                    <p class="name_c">上弦月 shàng xián yuè</p>
-                </div>
-
-                <div class="moon_description">
-                    <p class="time">The first quarter moon rises in the east in the early evening and lasts through the night until it sets in the west around midnight.</p>
-                    <p class="c_poetry"><span class="highlighted-word">月落</span>乌啼霜满天</p>
-                    <p class="translation">The <span class="highlighted-word">moon sets in midnight</span> and the crows cry</p>
-
-                </div>
+            <div class="moon_description">
+                <p class="time">The crescent moon will appear in the western sky shortly after sunset.</p>
+                <p class="c_poetry"><span class="highlighted-word">凉月如眉</span>挂柳湾</p>
+                <p class="translation">The <span class="highlighted-word">cool moon, like an eyebrow</span>, hangs over
+                    the willow bay</p>
             </div>
-
-
         </div>
 
-        <div class="moon_card" id="waxing_gibbous">
-            <div class="card-inner">
-                <div class="moon_image">
-                    <img class="moon_img" src="moon_phase/3.pic.jpg" alt="">
-                </div>
-                <div class="name">
-                    <p class="name_e">Waxing Gibbous</p>
-                    <p class="name_c">盈凸月 yíng tú yuè</p>
-                </div>
+    </div>
 
-                <div class="moon_description">
-                    <p class="time">The first quarter moon rises in the east in the early evening and lasts through the night until it sets in the west around midnight.</p>
-                    <p class="c_poetry"></p>
-                    <p class="translation"></p>
-
-                </div>
+    <div class="moon_card" id="first_quarter">
+        <div class="card-inner">
+            <div class="moon_image">
+                <img class="moon_img" src="img/moon_phase/2.jpg" alt="">
+            </div>
+            <div class="name">
+                <p class="name_e">First Quarter</p>
+                <p class="name_c">上弦月 shàng xián yuè</p>
             </div>
 
+            <div class="moon_description">
+                <p class="time">The first quarter moon rises in the east in the early evening and lasts through the
+                    night until it sets in the west around midnight.</p>
+                <p class="c_poetry"><span class="highlighted-word">月落</span>乌啼霜满天</p>
+                <p class="translation">The <span class="highlighted-word">moon sets in midnight</span> and the crows cry
+                </p>
 
+            </div>
         </div>
 
-        <div class="moon_card" id="full_moon">
-            <div class="card-inner">
-                <div class="moon_image">
-                    <img class="moon_img" src="moon_phase/4.pic.jpg" alt="">
-                </div>
-                <div class="name">
-                    <p class="name_e">Full Moon</p>
-                    <p class="name_c">望月 wàng yuè</p>
-                </div>
 
-                <div class="moon_description">
-                    <p class="time">The full moon rises in the east in the evening and is visible all night until it sets in the west in the early morning.</p>
-                    <p class="c_poetry"><span class="highlighted-word">明月</span>几时有？把酒问青天</p>
-                    <p class="translation">When will we have the <span class="highlighted-word">bright moon</span>? I raise my wine to ask the azure sky. </p>
+    </div>
 
-                </div>
+    <div class="moon_card" id="waxing_gibbous">
+        <div class="card-inner">
+            <div class="moon_image">
+                <img class="moon_img" src="img/moon_phase/3.pic.jpg" alt="">
+            </div>
+            <div class="name">
+                <p class="name_e">Waxing Gibbous</p>
+                <p class="name_c">盈凸月 yíng tú yuè</p>
             </div>
 
+            <div class="moon_description">
+                <p class="time">The first quarter moon rises in the east in the early evening and lasts through the
+                    night until it sets in the west around midnight.</p>
+                <p class="c_poetry"></p>
+                <p class="translation"></p>
 
+            </div>
         </div>
 
-        <div class="moon_card" id="waning_gibbous">
-            <div class="card-inner">
-                <div class="moon_image">
-                    <img class="moon_img" src="moon_phase/5.pic.jpg" alt="">
-                </div>
-                <div class="name">
-                    <p class="name_e">Waning Gibbous</p>
-                    <p class="name_c">亏凸月 kuī tú yuè</p>
-                </div>
 
-                <div class="moon_description">
-                    <p class="time"> The full moon rises in the east in the evening, is visible throughout the night, and sets in the west in the early morning.</p>
-                    <p class="c_poetry">。</p>
-                    <p class="translation">
-                    </p>
-                </div>
+    </div>
+
+    <div class="moon_card" id="full_moon">
+        <div class="card-inner">
+            <div class="moon_image">
+                <img class="moon_img" src="img/moon_phase/4.pic.jpg" alt="">
+            </div>
+            <div class="name">
+                <p class="name_e">Full Moon</p>
+                <p class="name_c">望月 wàng yuè</p>
             </div>
 
+            <div class="moon_description">
+                <p class="time">The full moon rises in the east in the evening and is visible all night until it sets in
+                    the west in the early morning.</p>
+                <p class="c_poetry"><span class="highlighted-word">明月</span>几时有？把酒问青天</p>
+                <p class="translation">When will we have the <span class="highlighted-word">bright moon</span>? I raise
+                    my wine to ask the azure sky. </p>
 
-
+            </div>
         </div>
 
-        <div class="moon_card" id="last_quarter">
-            <div class="card-inner">
-                <div class="moon_image">
-                    <img class="moon_img" src="moon_phase/6.pic.jpg" alt="">
-                </div>
-                <div class="name">
-                    <p class="name_e">Last Quarter</p>
-                    <p class="name_c">下弦月 xià xián yuè</p>
-                </div>
 
-                <div class="moon_description">
-                    <p class="time"> The last quarter moon rises in the east around midnight, is visible throughout the early morning</p>
-                    <p class="c_poetry"></p>
-                    <p class="translation"></p>
+    </div>
 
-                </div>
+    <div class="moon_card" id="waning_gibbous">
+        <div class="card-inner">
+            <div class="moon_image">
+                <img class="moon_img" src="img/moon_phase/5.pic.jpg" alt="">
+            </div>
+            <div class="name">
+                <p class="name_e">Waning Gibbous</p>
+                <p class="name_c">虧凸月 kuī tú yuè</p>
             </div>
 
-
+            <div class="moon_description">
+                <p class="time"> The full moon rises in the east in the evening, is visible throughout the night, and
+                    sets in the west in the early morning.</p>
+                <p class="c_poetry">。</p>
+                <p class="translation">
+                </p>
+            </div>
         </div>
 
-        <div class="moon_card" id="waning_crescent">
-            <div class="card-inner">
-                <div class="moon_image">
-                    <img class="moon_img" src="moon_phase/7.pic.jpg" alt="">
-                </div>
-                <div class="name">
-                    <p class="name_e">Waning Crescent</p>
-                    <p class="name_c">残月 cán yuè</p>
-                </div>
 
-                <div class="moon_description">
-                    <p class="time">The waning moon rises in the east in the early morning and is visible until the sun rises.</p>
-                    <p class="c_poetry">杨柳岸，晓风残月。</p>
-                    <p class="translation">By the willow bank, in the morning breeze and waning moon.</p>
-                </div>
+    </div>
+
+    <div class="moon_card" id="last_quarter">
+        <div class="card-inner">
+            <div class="moon_image">
+                <img class="moon_img" src="img/moon_phase/6.pic.jpg" alt="">
+            </div>
+            <div class="name">
+                <p class="name_e">Last Quarter</p>
+                <p class="name_c">下弦月 xià xián yuè</p>
             </div>
 
+            <div class="moon_description">
+                <p class="time"> The last quarter moon rises in the east around midnight, is visible throughout the
+                    early morning</p>
+                <p class="c_poetry"></p>
+                <p class="translation"></p>
 
+            </div>
         </div>
+
+
+    </div>
+
+    <div class="moon_card" id="waning_crescent">
+        <div class="card-inner">
+            <div class="moon_image">
+                <img class="moon_img" src="img/moon_phase/7.pic.jpg" alt="">
+            </div>
+            <div class="name">
+                <p class="name_e">Waning Crescent</p>
+                <p class="name_c">殘月 cán yuè</p>
+            </div>
+
+            <div class="moon_description">
+                <p class="time">The waning moon rises in the east in the early morning and is visible until the sun
+                    rises.</p>
+                <p class="c_poetry">杨柳岸，晓风残月。</p>
+                <p class="translation">By the willow bank, in the morning breeze and waning moon.</p>
+            </div>
+        </div>
+
+
+    </div>
 </div>
 </body>
 </html>
