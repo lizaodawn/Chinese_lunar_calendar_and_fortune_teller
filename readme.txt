@@ -15,4 +15,5 @@ preview:https://raw.githack.com/lizaodawn/WISproject/main/mainpagefullscreen.htm
 3. 三个subpage navigation bar样式有细微不同，须统一（是否随页面滚动、显示大小）
 4. 页面文字、button更改字体后大小改变，需要调整排版
 5. 中文字体“酉”字形显示有误，可能需要换字体
-6. Lots of Answer底部section layout调整
+6. 主页layout适配较大屏幕
+7. Lots of Answer底部section layout调整
