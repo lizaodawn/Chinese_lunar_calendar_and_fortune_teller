@@ -1,0 +1,695 @@
+@import url('https://fonts.googleapis.com/icon?family=Material+Icons');
+/*轮播图必须放在顶部*/
+
+/*bar*/
+#header {
+    height: 40px;
+
+    background: #9E2C36;
+
+    display: flex;
+    align-items: center;
+}
+
+
+#link {
+    width: 200px;
+
+    display:flex;
+    justify-content: flex-end;
+    align-items: center;
+    gap: 10px;
+}
+
+#homePage, #drawLots, #info {
+    color: rgb(255, 255, 255);
+    font-size: 16px;
+    text-align: center;
+}
+/*bar-over*/
+
+
+/*整体滚动*/
+*{
+    margin:0;padding:0;}
+html,body{
+    width: 100%;
+    height:100vh;
+    overflow:hidden;}
+
+.scrollContainer{
+    position: relative;
+    transition: 1s;
+    /*width: 100%;*/
+    height: 100vh;
+    overflow-y:auto;
+    /*overflow-x: hidden;*/
+    margin-right: calc(100% - 100vw);
+}
+
+.section {
+    position: relative;
+    width: 100vw;
+    height: 100vh;
+}
+/*整体滚动结束*/
+
+
+/*答案之书+翻书*/
+body {
+    background-image:url("./images/background.png");
+    background-size: cover;
+    background-repeat: no-repeat;
+    overflow: hidden;
+    width: 100%;
+    height: 100%;
+}
+
+.h1_container{
+    position: absolute;
+    left:40%;
+    top:20%;
+    transform:translate(-50%,-50%);
+}
+.h1_container h1{
+    font-size: 4em;
+    color:rgba(255,255,255,0.3);
+    background-image: url("./images/redcloud.jpeg");
+    text-transform: uppercase;
+    letter-spacing: 8px;
+    -webkit-background-clip: text;
+    font-weight: 500;
+    animation: wave 30s linear infinite;
+    white-space: nowrap;/*不自动换行*/
+}
+
+
+@keyframes wave {
+    from{
+        background-position:0 0;
+    }
+    to{
+        background-position: 1000px 0;
+    }
+
+}
+
+#sentence{
+    color:black;
+    font-size: 25px;
+    font-style: italic;
+    position: absolute;
+    top:40%;
+    left:28%;
+    text-align: center;
+}
+
+.button-container {
+    position: absolute;
+    text-align:center;
+    left:50%;
+    top:70%;
+    transform:translate(-50%,-50%);
+    font-size:24px;
+    cursor:pointer;
+    border-radius: 24px;
+}
+
+.btn{
+    border:none;
+    margin:20px;
+    padding:24px;
+    font-family:"montserrat",sans-serif;
+    text-transform: uppercase;
+    border-radius:6px;
+    cursor:pointer;
+    color:#fff;
+    background-size:200%;
+}
+.btn1{
+    background-image:linear-gradient(to left,#c04851,#7c1823,#a7535a);
+}
+.btn:hover{
+    background-position: right;
+}
+
+.book{
+    width:150px;
+    height:200px;
+    background-color: #fff;
+
+    /*开启3d效果*/
+    transform-style: preserve-3d;
+
+    /*设置视距*/
+    perspective: 2000px;
+
+    /*设置阴影*/
+    box-shadow: inset 300px 0 30px rgba(0, 0, 0,0.2),
+    0 10px 100px rgba(0, 0, 0, 0.3);
+
+    /*动画过渡*/
+    transition: 1s;
+    position: absolute;
+    right:10%;
+    bottom:5%;
+}
+/*鼠标移入 阴影变化加旋转*/
+.book:hover {
+    transform: rotate(-10deg);
+    box-shadow: inset 20px 0 30px rgba(0, 0, 0, 0.2),
+    0 10px 100px rgba(0, 0, 0, 0.3);
+}
+
+.book::before{
+    content:"";
+    /*绝对定位*/
+    position:absolute;
+    left:0;
+    top: -5px;
+    width:100%;
+    height:5px;
+    background-color: #a7535a;
+    /*设置旋转元素的基点位置*/
+    transform-origin: bottom;
+    /*沿x轴倾斜-45度*/
+    transform:skew(-45deg);
+}
+.book::after{
+    content: "";
+    position: absolute;
+    top:0;
+    right:-5px;
+    width:5px;
+    height:100%;
+    background-color:#7c1823;
+    transform-origin: left;
+    transform: skewY(-45deg);
+}
+/*封面*/
+.book .cover{
+    width:100%;
+    height:100%;
+    background-color: #4d1018;
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    transform-origin: left;
+    transition: 1s;
+}
+.book .cover span{
+    position: absolute;
+    right: 30px;
+    top:30px;
+    background-color: #fff;
+    font-size: 20px;
+    /*font-family: "隶书";*/
+    /*竖向文本*/
+    writing-mode: vertical-lr;
+    padding: 10px 5px 5px 5px;
+    /*字间距*/
+    letter-spacing: 5px;
+}
+.book:hover .cover{
+    transform: rotateY(-135deg);
+}
+.book .bookContent{
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top:0;
+    left:0;
+    z-index: -1;
+    font-size: 12px;
+    text-indent: 2em;
+    /*font-family: "隶书";*/
+    line-height: 20px;
+    /*letter-spacing: 5px;*/
+    display:flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+/*第一部分截止*/
+
+/*轮播图*/
+
+body {
+    background-image:url("./images/background.png");
+}
+
+*{
+
+    margin: 0;
+    padding: 0;
+}
+.slide-box{
+    position: relative;
+    margin:30px auto;
+    height:300px;
+    max-width: 1200px;
+    min-width:700px;
+
+}
+.banner-box{
+    position: relative;
+    height: 100%;
+    width: 100%;
+}
+
+.banner-item{
+    position: absolute;
+    bottom: 0;
+    left:50%;
+    transform: translateX(-50%);
+    width:500px;
+    height:90%;
+    background-color: #000;
+    box-sizing:border-box;
+    border-radius: 10px;
+    overflow: hidden;
+    transition: all 0.5s;
+    z-index:0;
+}
+
+.banner-item>img{
+    display: block;
+    width: 100%;
+    height:100%;
+    opacity:0.5;
+    transition: opacity 0.5s;
+    object-fit: cover;
+}
+
+.banner-item.left{
+    left:0;
+    transform: translateX(0);
+    z-index:50;
+}
+.banner-item.right{
+    left:100%;
+    transform: translateX(-100%);
+    z-index:50;
+}
+.banner-item.middle{
+    width: 550px;
+    height: 100%;
+    z-index: 100;
+}
+.banner-item.middle>img{
+    opacity: 1;
+}
+.slide-left-btn,.slide-right-btn{
+    position: absolute;
+    top:50%;
+    z-index:200;
+    width:40px;
+    height:40px;
+    font-weight:900;
+    color:#b4b4b4;
+    border:none;
+    background:none;
+}
+.slide-left-btn:hover,.slide-right-btn:hover{
+    color:#fff;
+}
+.slide-left-btn{
+    left:1%;
+}
+.slide-right-btn{
+    right:1%;
+}
+.pagination-box{
+    margin-top: 10px;
+    width:100%;
+    display:flex;
+    justify-content:center;
+}
+.pagination-box>span{
+    width:20px;
+    height:6px;
+    border-radius: 3px;
+    margin:0 4px;
+    background-color: #b4b4b4;
+}
+.pagination-box>span.chose{
+    background-color: #7c1823;
+}
+
+/*Four Cards*/
+.containerForFour{
+    width:100vw;
+    position: absolute;
+    display: flex;
+    align-items: center;
+    /*gap: 3em;*/
+    transition: 0.5s;
+    height: 1200px;
+    /*transform: scale(0.7);*/
+}
+
+/*FirstCard*/
+.containerForFour .FirstCard{
+    width: 500px;
+    height: 500px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: 0.5s;
+    margin:60px 35px 60px 35px;
+    position: absolute;
+    left:5%;
+    top:1%;
+    /*设置初始大小为0.7*/
+    transform: scale(0.7);
+}
+p.line_c {
+    background-color: white;
+    height: 3px;
+    margin: 0 25px;
+    position: relative;
+    top: -5%;
+    width: 90%;
+}
+
+
+.containerForFour .FirstCard:hover{
+    filter: blur(0px);
+    transform: scale(1);
+}
+.containerForFour .FirstCard:before{
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    /*background:#82111f;*/
+    background:linear-gradient(to top,#82111f,transparent);
+    border-radius: 50px;
+    z-index: 1;
+    transition: 0.5s;
+}
+.containerForFour .FirstCard:hover:before{
+    background:#FFF;
+    transform: scale(1.15);
+    box-shadow: 0 5px 15px rgba(0,0,0,.2);
+}
+.containerForFour .FirstCard .content{
+    text-align: center;
+    z-index: 2;
+    padding: 0 20px;
+    transition: 0.5s;
+}
+.containerForFour .FirstCard:hover .content{
+    color:#7c1823;
+}
+.containerForFour .FirstCard .text_communist_c{
+    display: inline-block;
+    color: white;
+    font-size: 40px;
+    margin-top: -20px;
+    position: relative;
+    top: 50%;
+    transform: translateY(-50%);
+    z-index:99;
+}
+.containerForFour .FirstCard:hover .text_communist_c{
+    color:#000;
+    font-size: 20px;
+    font-weight: bold;
+}
+.containerForFour .FirstCard .text_content_c{
+    display: inline-block;
+    color:#82111f;
+    font-size: 10px;
+    text-align: justify;
+    line-height: 2;
+    z-index:99;
+}
+.containerForFour .FirstCard:hover .text_content_c{
+    color:#7c1823;
+    font-size:16px;
+    text-align: justify;
+}
+
+/*SecondCard*/
+
+.containerForFour .SecondCard{
+    width: 500px;
+    height: 500px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: 0.5s;
+    margin:60px 35px 60px 35px;
+    position: absolute;
+    right: 5%;
+    top:1%;
+    /*设置初始大小为0.7*/
+    transform: scale(0.7);
+}
+p.line_c {
+    background-color: white;
+    height: 3px;
+    margin: 0 25px;
+    position: relative;
+    top: -5%;
+    width: 90%;
+}
+
+
+.containerForFour .SecondCard:hover{
+    filter: blur(0px);
+    transform: scale(1);
+}
+.containerForFour .SecondCard:before{
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background:linear-gradient(to top,#82111f,transparent);
+    border-radius: 50px;
+    z-index: 1;
+    transition: 0.5s;
+}
+.containerForFour .SecondCard:hover:before{
+    background:#FFF;
+    transform: scale(1.15);
+    box-shadow: 0 5px 15px rgba(0,0,0,.2);
+}
+.containerForFour .SecondCard .content{
+    text-align: center;
+    z-index: 2;
+    padding: 0 20px;
+    transition: 0.5s;
+}
+.containerForFour .SecondCard:hover .content{
+    color:#4d1018;
+}
+.containerForFour .SecondCard .text_communist_c{
+    display: inline-block;
+    color: white;
+    font-size: 40px;
+    margin-top: -20px;
+    position: relative;
+    top: 50%;
+    transform: translateY(-50%);
+    /*top: -5px;*/
+    z-index:99;
+}
+.containerForFour .SecondCard:hover .text_communist_c{
+    color:#000;
+    font-size: 20px;
+    font-weight: bold;
+}
+.containerForFour .SecondCard .text_content_c{
+    display: inline-block;
+    color:#82111f;
+    font-size: 10px;
+    text-align: justify;
+    line-height: 2;
+    z-index:99;
+}
+.containerForFour .SecondCard:hover .text_content_c{
+    color:#4d1018;
+    font-size:16px;
+    text-align: justify;
+}
+.containerForFour-two{
+    width:100vw;
+    position: absolute;
+    display: flex;
+    /*gap: 3em;*/
+    justify-content: center;
+    transition: 0.5s;
+    height:800px;
+    /*transform: scale(0.7);*/
+}
+
+/*ThirdCard*/
+.containerForFour-two .ThirdCard{
+    width: 500px;
+    height: 500px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: 0.5s;
+    margin:60px 35px 60px 35px;
+    position: absolute;
+    left:5%;
+    /*到%20，30就放大不了*/
+    bottom:5%;
+    /*设置初始大小为0.7*/
+    transform: scale(0.7);}
+
+p.line_c {
+    background-color: white;
+    height: 3px;
+    margin: 0 25px;
+    position: relative;
+    top: -5%;
+    width: 90%;
+}
+
+
+.containerForFour-two .ThirdCard:hover{
+    filter: blur(0px);
+    transform: scale(1);
+}
+.containerForFour-two .ThirdCard:before{
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background:linear-gradient(to top,#82111f,transparent);
+    border-radius: 50px;
+    z-index: 1;
+    transition: 0.5s;
+}
+.containerForFour-two .ThirdCard:hover:before{
+    background:#FFF;
+    transform: scale(1.15);
+    box-shadow: 0 5px 15px rgba(0,0,0,.2);
+}
+.containerForFour-two .ThirdCard .content{
+    text-align: center;
+    z-index: 2;
+    padding: 0 20px;
+    transition: 0.5s;
+}
+.containerForFour-two .ThirdCard:hover .content{
+    color:#4d1018;
+}
+.containerForFour-two .ThirdCard .text_communist_c{
+    display: inline-block;
+    color: white;
+    font-size: 40px;
+    margin-top: -20px;
+    position: relative;
+    top: 50%;
+    transform: translateY(-50%);
+    /*top: -5px;*/
+    z-index:99;
+}
+.containerForFour-two .ThirdCard:hover .text_communist_c{
+    color:#000;
+    font-size: 20px;
+    font-weight: bold;
+}
+.containerForFour-two .ThirdCard .text_content_c{
+    display: inline-block;
+    color:#82111f;
+    font-size: 10px;
+    text-align: justify;
+    line-height: 2;
+    z-index:99;
+}
+.containerForFour-two .ThirdCard:hover .text_content_c{
+    color:#4d1018;
+    font-size:16px;
+    text-align: justify;
+}
+
+/*FourthCard*/
+.containerForFour-two .FourthCard{
+    width: 500px;
+    height: 500px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: 0.5s;
+    margin:60px 35px 60px 35px;
+    position: absolute;
+    right:5%;
+    bottom:5%;
+    transform:scale(0.7);
+}
+p.line_c {
+    background-color: white;
+    height: 3px;
+    margin: 0 25px;
+    position: relative;
+    top: -5%;
+    width: 90%;
+}
+
+
+.containerForFour-two .FourthCard:hover{
+    filter: blur(0px);
+    transform: scale(1);
+}
+.containerForFour-two .FourthCard:before{
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background:linear-gradient(to top,#82111f,transparent);
+    border-radius: 50px;
+    z-index: 1;
+    transition: 0.5s;
+}
+.containerForFour-two .FourthCard:hover:before{
+    background:#FFF;
+    transform: scale(1.15);
+    box-shadow: 0 5px 15px rgba(0,0,0,.2);
+}
+.containerForFour-two .FourthCard .content{
+    text-align: center;
+    z-index: 2;
+    padding: 0 20px;
+    transition: 0.5s;
+}
+.containerForFour-two .FourthCard:hover .content{
+    color:#4d1018;
+}
+.containerForFour-two .FourthCard .text_communist_c{
+    display: inline-block;
+    color: white;
+    font-size: 40px;
+    margin-top: -20px;
+    position: relative;
+    top: 50%;
+    transform: translateY(-50%);
+    z-index:99;
+}
+.containerForFour-two .FourthCard:hover .text_communist_c{
+    color:#000;
+    font-size: 20px;
+    font-weight: bold;
+}
+.containerForFour-two .FourthCard .text_content_c{
+    display: inline-block;
+    color:#82111f;
+    font-size: 10px;
+    text-align: justify;
+    line-height: 2;
+    z-index:99;
+}
+.containerForFour-two .FourthCard:hover .text_content_c {
+    color: #4d1018;
+    font-size: 16px;
+    text-align: justify;
+}
+
+/*四个响应式卡片编辑结束*/
+
