@@ -49,10 +49,12 @@
 }
 
 .eng_head {
+    position: relative;
     display:block;
     text-align: right;
     margin-top: 250px;
     justify-content: flex-end;
+    z-index: 3;
 }
 
 #t1 {
@@ -81,6 +83,7 @@ h2 {
     display:flex;
     position:relative;
     justify-content: flex-end;
+
 }
 
 .text-container {
@@ -89,6 +92,7 @@ h2 {
     flex-direction: row;
     justify-content: space-between;
     margin-top:-10px;
+    z-index: 3;
 }
 
 .text-block {

@@ -1,0 +1,111 @@
+.solar-system_container {
+    position:relative;
+    margin-left: 200px;
+}
+
+.solar-system, .earth-orbit {
+    position: absolute;
+    margin: 0 auto;
+    border-radius: 50%;
+}
+
+.sun, .earth, .moon {
+    position: absolute;
+    border-radius: 50%;
+}
+
+.sun {
+    height: 100px;
+    width: 100px;
+    background: yellow;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background: url('sun_for_move.svg') no-repeat center center;
+    background-size: cover;
+}
+
+
+.solar-system {
+    height: 500px;
+    width: 500px;
+    animation: spin 24s infinite linear;
+}
+
+.earth-orbit {
+    height: 100%;
+    width: 100%;
+    animation: spin 10s infinite linear;
+}
+
+.earth {
+    height: 50px;
+    width: 50px;
+    background: blue;
+    position: absolute;
+    top: 25%;
+    left: 75%;
+    background: url('earth_for_move.svg') no-repeat center center;
+    background-size: cover;
+}
+
+.moon {
+    height: 20px;
+    width: 20px;
+    background: grey;
+    position: absolute;
+    top: 25%;
+    left: 125%;
+    animation: spin 2s infinite linear;
+    background: url('moon_for_move.svg') no-repeat center center;
+    background-size: cover;
+}
+
+.moon-orbit {
+    height: 100%;
+    width: 100%;
+    position: absolute;
+}
+
+.earth-orbit-path {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 95px; /* double of the border width you set before */
+    height: 95px; /* double of the border width you set before */
+    border: 1px solid rgba(184, 191, 201, 0.4); /* you can change the border color and thickness here */
+    border-radius: 50%;
+    transform: translate(-50%, -50%);
+    background: transparent; /* the fill color of the circle */
+}
+
+.solar-system-path {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 360px;
+    height: 360px;
+    border: 1px solid rgba(184, 191, 201, 0.4); /* you can change the border color and thickness here */
+    border-radius: 50%;
+    transform: translate(-50%, -50%);
+    background: transparent;  /* the fill color of the circle */
+}
+
+.earth, .moon, .sun {
+    z-index: 2;
+}
+
+.earth-orbit-path, .moon-orbit-path, .solar-system-path {
+    z-index: 1;
+}
+
+
+
+@keyframes spin {
+    from {
+        transform: rotate(0deg);
+    }
+    to {
+        transform: rotate(1turn);
+    }
+}
