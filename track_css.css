@@ -35,7 +35,7 @@
 .earth-orbit {
     height: 100%;
     width: 100%;
-    animation: spin 10s infinite linear;
+    animation: spin 50s infinite linear;
 }
 
 .earth {
@@ -65,6 +65,7 @@
     height: 100%;
     width: 100%;
     position: absolute;
+    animation: spin 1s infinite linear;
 }
 
 .earth-orbit-path {
