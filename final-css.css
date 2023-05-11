@@ -341,9 +341,10 @@ html, body {
 /*Four Cards*/
 .containerForFour {
     width: 100vw;
-    position: absolute;
+    position: relative;
     display: flex;
     align-items: center;
+    margin-top: 0;
     /*gap: 3em;*/
     transition: 0.5s;
     height: 1200px;
@@ -358,12 +359,12 @@ html, body {
     justify-content: center;
     align-items: center;
     transition: 0.5s;
-    margin: 60px 35px 60px 35px;
+    margin: 15px 35px 60px 35px;
     position: absolute;
     left: 5%;
     top: 1%;
     /*设置初始大小为0.7*/
-    transform: scale(0.7);
+    transform: scale(0.8);
 }
 
 p.line_c {
@@ -451,12 +452,12 @@ p.line_c {
     justify-content: center;
     align-items: center;
     transition: 0.5s;
-    margin: 60px 35px 60px 35px;
+    margin: 15px 35px 60px 35px;
     position: absolute;
     right: 5%;
     top: 1%;
     /*设置初始大小为0.7*/
-    transform: scale(0.7);
+    transform: scale(0.8);
 }
 
 p.line_c {
@@ -554,13 +555,14 @@ p.line_c {
     justify-content: center;
     align-items: center;
     transition: 0.5s;
-    margin: 60px 35px 60px 35px;
+    margin: 60px 35px 0px 35px;
     position: absolute;
     left: 5%;
     /*到%20，30就放大不了*/
+    top: 30%;
     bottom: 5%;
     /*设置初始大小为0.7*/
-    transform: scale(0.7);
+    transform: scale(0.8);
 }
 
 p.line_c {
@@ -647,11 +649,12 @@ p.line_c {
     justify-content: center;
     align-items: center;
     transition: 0.5s;
-    margin: 60px 35px 60px 35px;
+    margin: 60px 35px 0px 35px;
     position: absolute;
     right: 5%;
+    top: 30%;
     bottom: 5%;
-    transform: scale(0.7);
+    transform: scale(0.8);
 }
 
 p.line_c {
