@@ -22,30 +22,42 @@ h1 {
     display: flex;
     justify-content: center;
     gap: 3em;
-    margin-top: 10px;
+    margin-top: 30px;
+    align-items: stretch;
 }
 
 .calendar {
-    width: 40%;
-    height: 100vh;
+    width: 50%;
+    height: 80%;
     position: relative;
 }
 
-#currentdate {
-    padding: 12px;
+
+.today {
+    font-size: 30px;
+    padding: 0.2em;
 }
 
 .calendarcontent {
-    flex-grow: 1;
+    flex-grow: 2;
     display: flex;
     justify-content: space-between;
     align-items: flex-start;
+    margin-top: 2%;
 }
 
 #previous-day, #next-day {
-    margin-top: 160px;
+    margin-top: 10em;
     border: transparent;
-    font-size: large;
+    font-size: x-large;
+}
+
+#previous-day {
+    margin-right: 2px;
+}
+
+#next-day {
+    margin-left: 2px;
 }
 
 .btn-outline-secondary:hover {
@@ -60,7 +72,7 @@ h1 {
 .calendarcontent > .dos,
 .calendarcontent > .donts {
     flex: 0 0 30%;
-    font-size: smaller;
+    font-size: 20px;
 }
 
 .calendarcontent > .dos {
@@ -74,8 +86,9 @@ h1 {
 p {
     margin-top: 0;
     margin-bottom: 0;
-    font-size: smaller;
+    font-size: 25px;
 }
+
 
 .card {
     background-color: transparent;
@@ -85,7 +98,8 @@ p {
     display: flex;
     flex-direction: column;
     justify-content: flex-start;
-    margin-top: 5px;
+    margin-bottom: 15px;
+    margin-top: 20px;
 }
 
 .solarterm {
@@ -105,6 +119,7 @@ p {
     justify-content: space-between;
     align-items: flex-start;
     margin-top: 0;
+    margin-bottom: 20px;
 }
 
 .termdes {
@@ -134,15 +149,17 @@ p {
     color: var(--primary-color-darker);
 }*/
 
-h6 {
-    color: #9D3004;
+h2 {
+    color: var(--primary-color-darker);
 }
 
 .functioncontainer {
     display: flex;
     flex-direction: column;
-    gap: 10px;
-    width: 15em;
+    gap: 50px;
+    flex-wrap: wrap;
+    align-items: stretch;
+    width: 20%;
 }
 
 .functioncontainer > .card {
@@ -150,15 +167,20 @@ h6 {
 
 }
 
+.card-text {
+    margin-top: 15px;
+    margin-bottom: 10px;
+}
 
 .card-img-top {
-    width: 60%;
+    width: 65%;
     object-fit: contain;
     align-self: center;
 }
 
+
 .scale {
-    width: 75%;
+    width: 85%;
 }
 
 .scale:hover {
@@ -217,7 +239,7 @@ h6 {
 }
 
 .btn {
-    font-size: smaller;
+    font-size: x-large;
 }
 
 /*.btn-primary {
@@ -262,9 +284,10 @@ h6 {
 .list-group-item {
     position: relative;
     display: block;
-    padding: 0.5rem 1rem;
+    padding: 1rem 1rem;
     background-color: #fff;
     border: 1px solid rgba(0, 0, 0, .125);
+    font-size: 25px;
 }
 
 .list-title {
@@ -273,86 +296,105 @@ h6 {
     justify-content: center;
     font-weight: bold;
     text-transform: uppercase;
-    height: 70px;
-    width: 70px;
+    height: 125px;
+    width: 125px;
     border-radius: 50%;
     color: #fff;
     margin: 0 auto;
-    font-size: 1em;
+    font-size: 25px;
 }
 
 .dos-title {
-    background-color: #9E2C36;
+    background-color: var(--primary-color);
 }
 
 .donts-title {
-    background-color: #574241;
+    background-color: var(--dark);
 }
 
 
 #dos .list-group-item {
-    color: #9E2C36;
+    color: var(--primary-color);
     background-color: transparent;
 }
 
 #donts .list-group-item {
-    color: #574241;
+    color: var(--dark);
     background-color: transparent;
 }
 
 #currentdate {
-    font-size: 20px;
     text-align: center;
     color: white;
 }
+
 
 #lunar-date {
     font-family: engfont, sans-serif;
     font-weight: bold;
     text-align: center;
-    font-size: 22px;
-    color: #9D3004;
-    line-height: 1;
+    color: var(--primary-color-darker);
+    line-height: 1.2;
     margin-top: 10px;
+}
+
+.des {
+    font-size: 35px;
 }
 
 
 .day {
-    color: #9E2C36;
-    font-size: 70px;
+    color: var(--primary-color);
+    font-size: 100px;
     margin-top: 0.2em;
 }
 
 .month {
-    color: #A86372;
-    font-size: 30px;
+    color: var(--primary-color-lighter);
+    font-size: 50px;
 }
 
 .year {
-    color: #BD817F;
-    font-size: 20px;
+    color: var(--primary-color-lightest);
+    font-size: 30px;
     margin-bottom: 0.6em;
 }
 
 #zodiac-image {
-    width: 6em;
+    width: 80%;
 }
 
 .moonphaseimg {
-    width: 5.3em;
+    width: 10em;
 }
 
 .phasename {
     margin-top: 5px;
-    color: #564145;
+    color: var(--dark);
 }
 
 .phasech {
     margin-top: 5px;
-    color: #564145;
+    color: var(--dark);
 }
 
+#currentdate {
+    cursor: pointer;
+}
 
+#currentdate:hover::before {
+    content: "Back to Today";
+    display: inline-block;
+    position: absolute;
+    top: 100%;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: var(--primary-color-lightest);
+    color: #fff;
+    padding: 3px 10px;
+    border-radius: 5px;
+    font-size: 20px;
+}
 
 
 

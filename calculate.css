@@ -48,7 +48,7 @@
     margin: 40px;
     height: fit-content;
 
-    color: rgb(150, 150, 150);
+    color: var(--grey);
     font-size: 48px;
     text-align: center;
 }
@@ -114,23 +114,23 @@
 .time {
     width: calc(100% / 4);
 
-    color: rgb(150, 150, 150);
+    color: var(--grey);
     font-size: 12px;
     text-align: center;
 
     background: transparent;
-    border: 1px solid rgb(150, 150, 150);
+    border: 1px solid var(--grey);
 
     font-family: engfont, chifont, sans-serif;
 }
 
 .time:hover{
-    background-color: rgb(150, 150, 150);
+    background-color: var(--grey);
     color: #fff;
 }
 
 .time.active {
-    background-color: rgb(150, 150, 150);
+    background-color: var(--grey);
     color: #fff;
 }
 
@@ -180,7 +180,7 @@
 #telling p {
     margin: 10px;
 
-    color: rgb(150, 150, 150);
+    color: var(--grey);
     font-size: 20px;
     text-align: center;
     white-space: nowrap;

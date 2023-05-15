@@ -151,6 +151,7 @@ function updateDate(offset) {
 
 }
 
+
 document.getElementById('previous-day').addEventListener('click', function () {
     updateDate(-1);
 });
@@ -163,6 +164,7 @@ document.getElementById('currentdate').addEventListener('click', function () {
     currentDate = new Date();
     updateDate(0);
 });
+
 
 const solarTermDiv = document.getElementById("solar-term");
 /*testday = new Date(2023, 3, 5)*/
