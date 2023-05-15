@@ -31,9 +31,10 @@
 
 @font-face {
     font-family: 'chifont';
-    src: url('font/dejima.ttf') format('truetype');
-    font-weight: normal;
+    src: url('font/QIJIC黄令东齐伋复刻体.ttf') format('truetype');
+    font-weight: bold;
     font-style: normal;
+    font-size: 200%;
 }
 
 body {

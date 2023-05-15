@@ -7,20 +7,28 @@ html, body {
     height: 100%
 }
 
-/*@media only screen and (max-width: 1200px) {
+@media screen and (max-width: 1200px) {
     .contentcontainer {
         flex-direction: column;
-        flex-grow: 4;
+        justify-content: center;
+        align-items: flex-start;
     }
 
-    .functioncontainer {
+    #functions {
+        width: 80%;
         flex-direction: row;
+        align-self: center;
+        justify-content: space-between;
+        flex-wrap: nowrap;
     }
 
-    .calendar {
-        width: 100%;
+
+    #calendarpage {
+        width: 80%;
+        align-self: center;
+
     }
-}*/
+}
 
 body {
     height: 100vh;
@@ -35,6 +43,7 @@ h1 {
 
 
 .contentcontainer {
+    position: relative;
     display: flex;
     justify-content: center;
     gap: 3vw;
@@ -100,7 +109,7 @@ h1 {
 p {
     margin-top: 0;
     margin-bottom: 0;
-    font-size: 2.3vh;
+    font-size: 2.4vh;
 }
 
 
@@ -113,7 +122,7 @@ p {
     flex-direction: column;
     justify-content: flex-start;
     margin-bottom: 1vh;
-    margin-top: 0.5vh;
+    margin-top: 2vh;
 }
 
 .solarterm {
@@ -133,7 +142,7 @@ p {
     justify-content: space-between;
     align-items: flex-start;
     margin-top: 0;
-    margin-bottom: 0.5vh;
+    margin-bottom: 0.8vh;
 }
 
 .termdes {
@@ -147,7 +156,7 @@ p {
 
 .card-link {
     text-align: center;
-    margin-top: 1vh;
+    margin-top: 1.3vh;
 
 }
 
@@ -172,7 +181,7 @@ p {
 .functioncontainer {
     display: flex;
     flex-direction: column;
-    gap: 2vh;
+    gap: 2.1vh;
     flex-wrap: wrap;
     align-items: stretch;
     width: 20%;
@@ -301,7 +310,7 @@ p {
     padding: 1.5vh;
     background-color: #fff;
     border: 0.1vh solid rgba(0, 0, 0, .125);
-    font-size: 2.3vh;
+    font-size: 2.4vh;
 }
 
 .list-title {
@@ -310,12 +319,12 @@ p {
     justify-content: center;
     font-weight: bold;
     text-transform: uppercase;
-    height: 15vh;
-    width: 15vh;
+    height: 7vw;
+    width: 7vw;
     border-radius: 50%;
     color: #fff;
     margin: 0 auto;
-    font-size: 2.5vh;
+    font-size: 1.3vw;
 }
 
 .dos-title {
@@ -352,34 +361,34 @@ p {
 
 .des {
     color: var(--primary-color-darker);
-    font-size: 3.5vh;
-    margin-top: 4vh;
+    font-size: 1.5vw;
+    margin-top: 3vh;
 }
 
 
 .day {
     color: var(--primary-color);
-    font-size: 12vh;
+    font-size: 5vw;
     margin-top: 1.5vh;
 }
 
 .month {
     color: var(--primary-color-lighter);
-    font-size: 6vh;
+    font-size: 2vw;
 }
 
 .year {
     color: var(--primary-color-lightest);
-    font-size: 3vh;
+    font-size: 1.5vw;
     margin-bottom: 1vh;
 }
 
 #zodiac-image {
-    height: 20vh;
+    width: 11vw;
 }
 
 .moonphaseimg {
-    height: 15vh;
+    height: 14vh;
 }
 
 .phasename {
