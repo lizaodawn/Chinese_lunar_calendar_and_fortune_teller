@@ -35,15 +35,6 @@ let sentences = [
 
 ];
 
-// 随机选择一个句子
-//let randomIndex = Math.floor(Math.random() * sentences.length);
-//let sentence = sentences[randomIndex];
-
-// 在网页上显示句子
-//let sentenceElement=document.getElementById("sentence");
-//sentenceElement.innerHTML = sentence;
-//sentenceElement.style.textAlign="center";
-
 let main = document.getElementsByClassName("main")[0];
 
 function generateSentence() {
