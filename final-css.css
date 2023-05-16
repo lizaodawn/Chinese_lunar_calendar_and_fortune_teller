@@ -338,18 +338,46 @@ html, body {
     background-color: var(--primary-color);
 }
 
+.S2 {
+    height: 30vh;
+    margin-bottom: 5vh;
+}
+
+.S3 {
+    height: 50vh;
+    margin-top: 5vh;
+    justify-content: center;
+    display: flex;
+    flex-direction: row;
+}
+
+
 /*Four Cards*/
-.containerForFour {
-    width: 100vw;
+.upper {
+    width: 60vw;
     position: relative;
     display: flex;
-    align-items: center;
+    justify-content: center;
+    align-self: center;
     margin-top: 0;
     /*gap: 3em;*/
     transition: 0.5s;
-    height: 1200px;
+    height: 500px;
     /*transform: scale(0.7);*/
 }
+
+.down {
+    width: 60vw;
+    position: absolute;
+    display: flex;
+    /*gap: 3em;*/
+    justify-content: center;
+    transition: 0.5s;
+    height: 500px;
+    margin-top: 30vh;
+    /*transform: scale(0.7);*/
+}
+
 
 /*FirstCard*/
 .containerForFour .FirstCard {
@@ -536,16 +564,6 @@ p.line_c {
     text-align: justify;
 }
 
-.containerForFour-two {
-    width: 100vw;
-    position: absolute;
-    display: flex;
-    /*gap: 3em;*/
-    justify-content: center;
-    transition: 0.5s;
-    height: 800px;
-    /*transform: scale(0.7);*/
-}
 
 /*ThirdCard*/
 .containerForFour-two .ThirdCard {
