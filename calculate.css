@@ -1,6 +1,6 @@
 #wholePage {
     position: absolute;
-    height: 680px;
+    /*height: 680px;*/
     top: 0;
     bottom: 0;
     left: 0;
@@ -11,6 +11,12 @@
     display: flex;
     justify-content: center;
     flex-direction: column;
+}
+
+@media screen and (max-width: 1280px) {
+    #wholePage {
+        width: 1280px;
+    }
 }
 
 @media screen and (max-width: 1280px) {
@@ -73,7 +79,7 @@
 #birthday {
     margin: 10px;
 
-    color: var(--primary-color)
+    color: var(--primary-color);
     font-size: 24px;
     text-align: center;
 }

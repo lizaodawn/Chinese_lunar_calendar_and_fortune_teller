@@ -8,7 +8,10 @@
     src: url('Hatton-Semibold.otf') format('truetype');
 }*/
 
-
+.everything_container{
+    width: 80%;
+    margin: 0 auto;
+}
 
 .parent {
     display: grid;
@@ -52,7 +55,7 @@
     position: relative;
     display:block;
     text-align: right;
-    margin-top: 250px;
+    margin-top: 150px;
     justify-content: flex-end;
     z-index: 3;
 }
@@ -75,14 +78,16 @@
 
 h2 {
     /*font-family: Hatton;*/
-    font-size: 5em;
-    letter-spacing: 4px;
+    font-size: 4.92em;
+    letter-spacing: 3px;
 }
 
 .text-box{
     display:flex;
     position:relative;
     justify-content: flex-end;
+    height:30vh;
+    margin-top:3vh;
 
 }
 
@@ -144,8 +149,8 @@ h2 {
 
 .sidebar {
     position: fixed;
-    top: 230px;
-    left: 60px;
+    top: 180px;
+    left: 140px;
     padding: 5px;
 }
 
@@ -164,6 +169,7 @@ h2 {
 .sidebar-button:hover {
     transform: scale(1.2);
 }
+
 
 #moon_b_img {
     height:auto;
