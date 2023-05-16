@@ -29,7 +29,7 @@
 .solar-system {
     height: 500px;
     width: 500px;
-    animation: spin 24s infinite linear;
+    animation: spin 48s infinite linear;
 }
 
 .earth-orbit {
@@ -65,7 +65,7 @@
     height: 100%;
     width: 100%;
     position: absolute;
-    animation: spin 1s infinite linear;
+    animation: spin 10s infinite linear;
 }
 
 .earth-orbit-path {
