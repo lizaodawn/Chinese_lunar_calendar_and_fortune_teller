@@ -7,7 +7,7 @@ html, body {
     height: 100%
 }
 
-@media screen and (max-width: 1500px) {
+@media screen and (max-width: 1200px) {
 
     .contentcontainer {
         flex-direction: column;
@@ -193,7 +193,7 @@ p {
     flex-direction: column;
     justify-content: flex-start;
     margin-bottom: 0.5vh;
-    margin-top: 2vh;
+    margin-top: 1vh;
 }
 
 
@@ -382,7 +382,7 @@ p {
     margin-top: 0;
     margin-bottom: 0;
     border-radius: 0;
-    height: 37vh;
+    height: 35vh;
 
 }
 
