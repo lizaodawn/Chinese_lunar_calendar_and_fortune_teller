@@ -86,25 +86,6 @@ html, body {
     border-radius: 24px;
 }
 
-/*.btn {
-    border: none;
-    margin: 20px;
-    padding: 24px;
-    !*    font-family: "montserrat", sans-serif;*!
-    text-transform: uppercase;
-    border-radius: 6px;
-    cursor: pointer;
-    color: #fff;
-    background-size: 200%;
-}
-
-.btn1 {
-    background-image: linear-gradient(to left, #c04851, #7c1823, #a7535a);
-}
-
-.btn:hover {
-    background-position: right;
-}*/
 
 #counsel {
     margin: 10px;
@@ -376,16 +357,6 @@ html, body {
     transform: scale(0.8);
 }
 
-p.line_c {
-    background-color: white;
-    height: 3px;
-    margin: 0 25px;
-    position: relative;
-    top: -5%;
-    width: 90%;
-}
-
-
 .containerForFour .FirstCard:hover {
     filter: blur(0px);
     transform: scale(1);
@@ -469,16 +440,6 @@ p.line_c {
     transform: scale(0.8);
 }
 
-p.line_c {
-    background-color: white;
-    height: 3px;
-    margin: 0 25px;
-    position: relative;
-    top: -5%;
-    width: 90%;
-}
-
-
 .containerForFour .SecondCard:hover {
     filter: blur(0px);
     transform: scale(1);
@@ -545,16 +506,6 @@ p.line_c {
     text-align: justify;
 }
 
-/*.containerForFour {*/
-/*    width: 100vw;*/
-/*    position: absolute;*/
-/*    display: flex;*/
-/*    !*gap: 3em;*!*/
-/*    justify-content: center;*/
-/*    transition: 0.5s;*/
-/*    height: 800px;*/
-/*    !*transform: scale(0.7);*!*/
-/*}*/
 
 /*ThirdCard*/
 .containerForFour .ThirdCard {
@@ -572,15 +523,6 @@ p.line_c {
     bottom: 5%;
     /*设置初始大小为0.7*/
     transform: scale(0.8);
-}
-
-p.line_c {
-    background-color: white;
-    height: 3px;
-    margin: 0 25px;
-    position: relative;
-    top: -5%;
-    width: 90%;
 }
 
 
@@ -665,16 +607,6 @@ p.line_c {
     bottom: 5%;
     transform: scale(0.8);
 }
-
-p.line_c {
-    background-color: white;
-    height: 3px;
-    margin: 0 25px;
-    position: relative;
-    top: -5%;
-    width: 90%;
-}
-
 
 .containerForFour .FourthCard:hover {
     filter: blur(0px);
