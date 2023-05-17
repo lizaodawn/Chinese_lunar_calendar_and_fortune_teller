@@ -86,25 +86,6 @@ html, body {
     border-radius: 24px;
 }
 
-/*.btn {
-    border: none;
-    margin: 20px;
-    padding: 24px;
-    !*    font-family: "montserrat", sans-serif;*!
-    text-transform: uppercase;
-    border-radius: 6px;
-    cursor: pointer;
-    color: #fff;
-    background-size: 200%;
-}
-
-.btn1 {
-    background-image: linear-gradient(to left, #c04851, #7c1823, #a7535a);
-}
-
-.btn:hover {
-    background-position: right;
-}*/
 
 #counsel {
     margin: 10px;
@@ -345,19 +326,13 @@ html, body {
 
 /*Four Cards*/
 .containerForFour {
-    width: 80vw;
     position: relative;
     align-items: center;
     margin-top: 0;
-    /*gap: 3em;*/
     transition: 0.5s;
-    /*height: 1200px;*/
-    /*transform: scale(0.7);*/
-
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
-    /*gap: 10px;*/
 }
 
 /*FirstCard*/
@@ -368,23 +343,11 @@ html, body {
     justify-content: center;
     align-items: center;
     transition: 0.5s;
-    /*margin: 15px 35px 60px 35px;*/
-    /*position: absolute;*/
     left: 5%;
     top: 1%;
     /*设置初始大小为0.7*/
     transform: scale(0.8);
 }
-
-p.line_c {
-    background-color: white;
-    height: 3px;
-    margin: 0 25px;
-    position: relative;
-    top: -5%;
-    width: 90%;
-}
-
 
 .containerForFour .FirstCard:hover {
     filter: blur(0px);
@@ -396,8 +359,7 @@ p.line_c {
     position: absolute;
     width: 100%;
     height: 100%;
-    /*background:#82111f;*/
-    background: linear-gradient(to top, var(--primary-color), transparent);
+    background: linear-gradient(to bottom, var(--primary-color), transparent);
     border-radius: 50px;
     z-index: 1;
     transition: 0.5s;
@@ -461,23 +423,11 @@ p.line_c {
     justify-content: center;
     align-items: center;
     transition: 0.5s;
-    /*margin: 15px 35px 60px 35px;*/
-    /*position: absolute;*/
     right: 5%;
     top: 1%;
     /*设置初始大小为0.7*/
     transform: scale(0.8);
 }
-
-p.line_c {
-    background-color: white;
-    height: 3px;
-    margin: 0 25px;
-    position: relative;
-    top: -5%;
-    width: 90%;
-}
-
 
 .containerForFour .SecondCard:hover {
     filter: blur(0px);
@@ -489,7 +439,7 @@ p.line_c {
     position: absolute;
     width: 100%;
     height: 100%;
-    background: linear-gradient(to top, var(--primary-color), transparent);
+    background: linear-gradient(to bottom, var(--primary-color), transparent);
     border-radius: 50px;
     z-index: 1;
     transition: 0.5s;
@@ -520,7 +470,6 @@ p.line_c {
     position: relative;
     top: 50%;
     transform: translateY(-50%);
-    /*top: -5px;*/
     z-index: 99;
 }
 
@@ -545,16 +494,6 @@ p.line_c {
     text-align: justify;
 }
 
-/*.containerForFour {*/
-/*    width: 100vw;*/
-/*    position: absolute;*/
-/*    display: flex;*/
-/*    !*gap: 3em;*!*/
-/*    justify-content: center;*/
-/*    transition: 0.5s;*/
-/*    height: 800px;*/
-/*    !*transform: scale(0.7);*!*/
-/*}*/
 
 /*ThirdCard*/
 .containerForFour .ThirdCard {
@@ -564,23 +503,10 @@ p.line_c {
     justify-content: center;
     align-items: center;
     transition: 0.5s;
-    /*margin: 60px 35px 0px 35px;*/
-    /*position: absolute;*/
     left: 5%;
-    /*到%20，30就放大不了*/
     top: 30%;
     bottom: 5%;
-    /*设置初始大小为0.7*/
     transform: scale(0.8);
-}
-
-p.line_c {
-    background-color: white;
-    height: 3px;
-    margin: 0 25px;
-    position: relative;
-    top: -5%;
-    width: 90%;
 }
 
 
@@ -594,7 +520,7 @@ p.line_c {
     position: absolute;
     width: 100%;
     height: 100%;
-    background: linear-gradient(to top, var(--primary-color), transparent);
+    background: linear-gradient(to bottom, var(--primary-color), transparent);
     border-radius: 50px;
     z-index: 1;
     transition: 0.5s;
@@ -625,7 +551,6 @@ p.line_c {
     position: relative;
     top: 50%;
     transform: translateY(-50%);
-    /*top: -5px;*/
     z-index: 99;
 }
 
@@ -658,23 +583,11 @@ p.line_c {
     justify-content: center;
     align-items: center;
     transition: 0.5s;
-    /*margin: 60px 35px 0px 35px;*/
-    /*position: absolute;*/
     right: 5%;
     top: 30%;
     bottom: 5%;
     transform: scale(0.8);
 }
-
-p.line_c {
-    background-color: white;
-    height: 3px;
-    margin: 0 25px;
-    position: relative;
-    top: -5%;
-    width: 90%;
-}
-
 
 .containerForFour .FourthCard:hover {
     filter: blur(0px);
@@ -686,7 +599,7 @@ p.line_c {
     position: absolute;
     width: 100%;
     height: 100%;
-    background: linear-gradient(to top, var(--primary-color), transparent);
+    background: linear-gradient(to bottom, var(--primary-color), transparent);
     border-radius: 50px;
     z-index: 1;
     transition: 0.5s;
