@@ -5,6 +5,14 @@
     src: url('carbon_text/CarbonText-Strong.ttf') format('truetype');
 }*/
 
+#link {
+    height: 40px;
+}
+
+.currentsubpage::before {
+    height: 40px !important;
+    top: -8px !important;
+}
 
 .background-image-container {
     position: fixed;

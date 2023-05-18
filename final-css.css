@@ -1,7 +1,6 @@
 @import url('https://fonts.googleapis.com/icon?family=Material+Icons');
 /*轮播图必须放在顶部*/
 
-
 /*整体滚动*/
 * {
     margin: 0;
@@ -191,7 +190,7 @@ html, body {
     height: 100%;
     position: absolute;
     top: 0;
-    left: 0;
+    left: 5px;
     z-index: -1;
     font-size: 12px;
     text-indent: 2em;
@@ -335,6 +334,12 @@ html, body {
     justify-content: center;
 }
 
+@media screen and (min-width: 1280px) {
+    .containerForFour{
+        width: 1280px;
+    }
+}
+
 /*FirstCard*/
 .containerForFour .FirstCard {
     width: 500px;
@@ -415,7 +420,6 @@ html, body {
 }
 
 /*SecondCard*/
-
 .containerForFour .SecondCard {
     width: 500px;
     height: 500px;
@@ -508,7 +512,6 @@ html, body {
     bottom: 5%;
     transform: scale(0.8);
 }
-
 
 .containerForFour .ThirdCard:hover {
     filter: blur(0px);

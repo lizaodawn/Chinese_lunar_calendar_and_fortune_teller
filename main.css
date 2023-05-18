@@ -42,12 +42,12 @@ body {
     background-repeat: no-repeat;
     background-attachment: fixed;
     background-size: cover;
-    font-family: engfont, chifont, sans-serif;
+    font-family: engfont, chifont, sans-serif !important;
     margin: 0;
 }
 
 p {
-    font-family: engfont, chifont, sans-serif;
+    font-family: engfont, chifont, sans-serif !important;
 }
 
 
@@ -56,8 +56,12 @@ p {
         justify: flex-end;
         padding: 10px;
         gap: 30px;*/
+    height: 40px;
     background-color: var(--primary-color);
-    /*    align-items: center;*/
+
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
 }
 
 #link {
