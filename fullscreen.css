@@ -56,12 +56,13 @@ html, body {
 
 
     #zodiac-image {
-        width: 20vw !important;
+        width: 15vw !important;
         align-self: center;
     }
 
     .termnphase {
         margin-top: 0;
+        position: relative;
     }
 
 
@@ -77,12 +78,112 @@ html, body {
         padding: 1vh !important;
     }
 
-    .moonphase, .solarterm {
-        font-size: 0.8em !important;
+    .termdes, .termcontent, .phasename, .phasech {
+        font-size: 2.5vh !important;
     }
 
     .moonphaseimg {
-        height: 10vh !important;
+        height: 12vh !important;
+    }
+
+    .card-title {
+        font-size: 3vh !important;
+    }
+
+
+    .card-link {
+        text-align: center;
+        margin-top: 10vh;
+    }
+
+
+}
+
+@media screen and (max-width: 600px) {
+
+    .contentcontainer {
+        flex-direction: column;
+        justify-content: center;
+        align-items: flex-start;
+    }
+
+    #functions {
+        width: 80%;
+        flex-direction: row;
+        align-self: center;
+        justify-content: space-between;
+        flex-wrap: nowrap;
+        margin-bottom: 3vh;
+    }
+
+
+    #calendarpage {
+        width: 80%;
+        align-self: center;
+
+    }
+
+
+    #lunar-date {
+        display: flex;
+        flex-direction: column;
+        align-content: center;
+        flex-wrap: wrap;
+        justify-content: center;
+        flex-grow: 2;
+        gap: 1.5vh;
+    }
+
+    p {
+        font-size: 2.5vh !important;
+    }
+
+    .des, .month, .year {
+        transform: scale(1.2);
+    }
+
+    .day {
+        font-size: 8vh !important;
+    }
+
+
+    #zodiac-image {
+        width: 15vw !important;
+        align-self: center;
+    }
+
+    .termnphase {
+        margin-top: 0;
+        position: relative;
+    }
+
+
+    #dos, #donts {
+        margin-bottom: 1vh !important;
+        height: 40vh !important;
+    }
+
+
+    .list-group-item {
+        padding: 1vh !important;
+        font-size: 2.2vh !important;
+    }
+
+    .termdes, .termcontent, .phasename, .phasech {
+        font-size: 2.2vh !important;
+    }
+
+    .card-text {
+        font-size: 2.2vh !important;
+    }
+
+
+    .moonphase, .solarterm {
+        height: 29vh !important;
+    }
+
+    .moonphaseimg {
+        height: 12vh !important;
     }
 
     .card-title {
@@ -208,6 +309,7 @@ p {
     border-image-slice: 1;
     border-width: 1.5px;
     border-style: solid;
+    border-style: solid;
     border-image-outset: 1px;
 }
 
@@ -275,6 +377,7 @@ p {
 .card-text {
     margin-top: 0.5vh;
     margin-bottom: 0.5vh;
+    color: var(--dark)
 }
 
 .card-img-top {
@@ -377,13 +480,10 @@ p {
 
 .list-group {
     display: block;
-    width: 100%;
-    height: 100%;
     margin-top: 0;
     margin-bottom: 0;
     border-radius: 0;
     height: 35vh;
-
 }
 
 .list-group-item {
