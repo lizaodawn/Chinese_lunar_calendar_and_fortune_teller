@@ -7,7 +7,7 @@ html, body {
     height: 100%
 }
 
-@media screen and (max-width: 1280px) {
+@media screen and (max-width: 1366px) {
 
     .contentcontainer {
         flex-direction: column;
@@ -76,10 +76,11 @@ html, body {
 
     .list-group-item {
         padding: 1vh !important;
+        font-size: 2.1vh !important;
     }
 
     .termdes, .termcontent, .phasename, .phasech {
-        font-size: 2.5vh !important;
+        font-size: 2vh !important;
     }
 
     .moonphaseimg {
@@ -87,7 +88,11 @@ html, body {
     }
 
     .card-title {
-        font-size: 3vh !important;
+        font-size: 2.4vh !important;
+    }
+
+    .card-text {
+        font-size: 2.2vh !important;
     }
 
     .termnphasecontent {
@@ -494,7 +499,7 @@ p {
     padding: 1.2vh;
     background-color: #fff;
     border: 0.1vh solid rgba(0, 0, 0, .125);
-    font-size: 2.4vh;
+    font-size: 2.3vh;
 }
 
 .list-title {
