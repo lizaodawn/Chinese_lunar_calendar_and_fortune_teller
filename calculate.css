@@ -168,7 +168,7 @@
     font-family: engfont, chifont, sans-serif;
 }
 
-.time:hover{
+.time:hover {
     background-color: var(--grey);
     color: #fff;
 }
