@@ -67,8 +67,8 @@
 #title {
     margin: 40px 0 0 0;
     height: fit-content;
-
-    /*color: var(--grey);*/
+    color: var(--dark);
+    font-family: engfont, chifont, sans-serif;
     font-size: 48px;
     text-align: center;
 }
