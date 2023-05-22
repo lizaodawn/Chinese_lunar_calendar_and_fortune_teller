@@ -1,6 +1,8 @@
 .solar-system_container {
     position:relative;
-    margin-left: 200px;
+    height:0%;
+    right:1%;
+    left:20%
 }
 
 .solar-system, .earth-orbit {

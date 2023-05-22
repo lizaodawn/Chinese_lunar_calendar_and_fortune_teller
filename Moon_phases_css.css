@@ -95,7 +95,7 @@
 }
 
 .highlighted-word {
-    color: red; /* Set the text color if needed */
+    color: #9e2c36; /* Set the text color if needed */
 }
 
 .moon_card:not(.current) .moon_image img {
@@ -134,13 +134,7 @@
     margin-top: 50px;
 }
 
-@media screen and (min-width: 600px) {
-    .moon_card {
-        position: relative;
-        display: flex;
-        flex-direction: column;
-    }
-}
+
 
 
 

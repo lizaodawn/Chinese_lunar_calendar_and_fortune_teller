@@ -13,6 +13,11 @@
     margin: 0 auto;
 }
 
+body {
+    min-width: 800px;
+}
+
+
 .parent {
     display: grid;
     grid-template-columns: repeat(5, 1fr);
@@ -21,9 +26,8 @@
     grid-row-gap: 0px;
 }
 
-.div1 { grid-area: 1 / 1 / 3 / 2; }
-.div2 { grid-area: 3 / 1 / 5 / 2; }
-.div3 { grid-area: 1 / 2 / 5 / 6; }
+.div2 { order:2; grid-area: 1 / 1 / 5 / 2; }
+.div3 { order:3; grid-area: 1 / 2 / 5 / 6; }
 
 
 .background-image-container {
@@ -52,18 +56,17 @@
 }
 
 .eng_head {
+    margin-top: 100px;
     position: relative;
     display:block;
     text-align: right;
-    margin-top: 150px;
     justify-content: flex-end;
     z-index: 3;
 }
 
+
 #t1 {
     display: block;
-
-
 }
 #t2{
    display: block;
@@ -72,13 +75,14 @@
 
 #t3{
     display: block;
-    margin-top: -70px;
+    margin-top: -55px;
     font-size:55px;
 }
 
+
 h2 {
     /*font-family: Hatton;*/
-    font-size: 4.92em;
+    font-size: 4.3em;
     letter-spacing: 3px;
 }
 
@@ -87,7 +91,7 @@ h2 {
     position:relative;
     justify-content: flex-end;
     height:30vh;
-    margin-top:3vh;
+    margin-top:15vh;
 
 }
 
@@ -104,8 +108,6 @@ h2 {
     width: 32%;
     padding: 1%;
 }
-
-
 
 .images-container {
     display: flex;
@@ -142,21 +144,47 @@ h2 {
 #track {
     position: absolute;
     width: 700px; /* Set the desired width */
-    height: auto；
+    height: auto;
     z-index: -1;
     padding-top: 100px;
 }
 
 .sidebar {
-    position: fixed;
-    top: 180px;
-    left: 140px;
+    position: relative;
     padding: 5px;
+    z-index:1;
+    margin-top:0px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 100%;
+
 }
+
+#moon_b_img {
+    height:auto;
+    weight:120%;
+}
+
+#home {
+    margin-top: 50px;
+}
+
+#sun_button {
+    margin-top: 60px;
+}
+
+#moon_button {
+    margin-top: 50px;
+
+}
+
+
+
 
 .sidebar-button {
     display: block;
-    margin-top: 40px;
+    margin-top: 0px;
     width:120px;
     height: 50px;
     border: none;
@@ -164,26 +192,119 @@ h2 {
     padding: 0;
     cursor: pointer;
 
+
 }
 
 .sidebar-button:hover {
     transform: scale(1.2);
 }
 
-
-#moon_b_img {
-    height:auto;
-    weight:120%;
+#home:hover::before {
+    content: "Back to info page";
+    display: inline-block;
+    position: absolute;
+    top: 100%;
+    right: -210px;
+    transform: translateX(-50%);
+    background-color: var(--dim);
+    color: #fff;
+    padding: 2vh;
+    border-radius: 2vh;
+    font-size: 1vh;
+    width: 100px; /* adjust this as necessary */
+    white-space: nowrap;
 }
 
-#sun_button{
-    margin-top: 50px;
+#sun_button:hover::before {
+    content: "Check out 24 Solar terms!";
+    display: inline-block;
+    position: absolute;
+    top: 100%;
+    right: -280px;
+    transform: translateX(-50%);
+    background-color: var(--dim);
+    color: #fff;
+    padding: 2vh;
+    border-radius: 2vh;
+    font-size: 1vh;
+    width: 150px; /* adjust this as necessary */
+    white-space: nowrap;
 }
+
+#moon_button:hover::before {
+    content: "Check out Moon Phases！";
+    display: inline-block;
+    position: absolute;
+    top: 100%;
+    right: -280px;
+    transform: translateX(-50%);
+    background-color: var(--dim);
+    color: #fff;
+    padding: 2vh;
+    border-radius: 2vh;
+    font-size: 1vh;
+    width: 150px; /* adjust this as necessary */
+    white-space: nowrap;
+}
+
+
 
 .highlighted-word {
     color: #9e2c36;
 }
 
+
+@media screen and (max-width: 920px) {
+    .eng_head {
+        top: 10%;
+        align-items: center;
+    }
+
+
+    #t2{
+        display: block;
+        margin-top: -80px;
+    }
+
+    #t3{
+        display: block;
+        margin-top: -70px;
+        font-size:55px;
+    }
+
+
+}
+
+@media screen and (max-width: 1530px) {
+    .eng_head {
+        top: 1%;
+        align-items: center;
+    }
+
+
+
+    #t2{
+        display: block;
+        margin-top: -50px;
+    }
+
+    #t3{
+        display: block;
+        margin-top: -50px;
+    }
+}
+
+@media screen and (max-width: 1100px) {
+    .text-container {
+        flex-direction: column;
+    }
+
+    .text-block {
+        width: 100%;
+    }
+
+
+}
 
 
 
