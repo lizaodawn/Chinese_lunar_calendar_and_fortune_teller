@@ -76,5 +76,53 @@ function highlightCurrentMoonPhase() {
     const currentMoonCard = document.getElementById(currentMoonPhaseId);
     currentMoonCard.classList.add("current");
 }
+function highlightCurrentMoonPhase() {
+    const currentDate = new Date();
+    const { phaseName, phaseNamech } = getMoonPhase(currentDate);
+
+    const moonPhaseNames = [
+        "New Moon",
+        "Waxing Crescent",
+        "First Quarter",
+        "Waxing Gibbous",
+        "Full Moon",
+        "Waning Gibbous",
+        "Last Quarter",
+        "Waning Crescent",
+    ];
+
+    const moonPhaseIds = [
+        "new_moon",
+        "waxing_crescent",
+        "first_quarter",
+        "waxing_gibbous",
+        "full_moon",
+        "waning_gibbous",
+        "last_quarter",
+        "waning_crescent",
+    ];
+
+    const currentMoonPhaseIndex = moonPhaseNames.indexOf(phaseName);
+    const currentMoonPhaseId = moonPhaseIds[currentMoonPhaseIndex];
+
+    const currentMoonCard = document.getElementById(currentMoonPhaseId);
+    currentMoonCard.classList.add("current");
+}
 
 highlightCurrentMoonPhase();
+
+function highlightText() {
+    const currentMoonCard = document.querySelector(".current");
+    if (currentMoonCard) {
+        const nameDivE = currentMoonCard.querySelector(".name_e");
+        const nameDivC = currentMoonCard.querySelector(".name_c");
+        nameDivE.style.color = "#9e2c36"; // replace with your preferred highlight color
+        nameDivC.style.color = "#9e2c36"; // replace with your preferred highlight color
+    }
+}
+
+highlightCurrentMoonPhase();
+highlightText();
+
+
+

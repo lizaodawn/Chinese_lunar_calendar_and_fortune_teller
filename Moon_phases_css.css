@@ -18,6 +18,8 @@
 }
 
 
+
+
 .moon_card {
     display: flex;
     position: absolute;
@@ -134,7 +136,64 @@
     margin-top: 50px;
 }
 
+@media screen and (min-width: 100px) {
+    .moon_card {
+        position: relative;
+        display: flex;
+        flex-direction: column;
+    }
+}
 
+#home:hover::before {
+    content: "Back to info page";
+    display: inline-block;
+    position: absolute;
+    top: 100%;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: var(--dim);
+    color: #fff;
+    padding: 2vh;
+    border-radius: 2vh;
+    font-size: 1vh;
+    width: 150px;
+    white-space: nowrap;
+    z-index: 999!important;
+}
+
+#sun_button:hover::before {
+    content: "Check out 24 Solar terms";
+    display: inline-block;
+    position: absolute;
+    top: 100%;
+    left: 45%;
+    transform: translateX(-50%);
+    background-color: var(--dim);
+    color: #fff;
+    padding: 2vh;
+    border-radius: 2vh;
+    font-size: 1vh;
+    width: 185px; /* adjust this as necessary */
+    white-space: nowrap;
+    z-index: 999!important;
+}
+
+#moon_button:hover::before {
+    content: "Check out Moon Phases";
+    display: inline-block;
+    position: absolute;
+    top: 100%;
+    left: 45%;
+    transform: translateX(-50%);
+    background-color: var(--dim);
+    color: #fff;
+    padding: 2vh;
+    border-radius: 2vh;
+    font-size: 1vh;
+    width: 175px; /* adjust this as necessary */
+    white-space: nowrap;
+    z-index: 999!important;
+}
 
 
 

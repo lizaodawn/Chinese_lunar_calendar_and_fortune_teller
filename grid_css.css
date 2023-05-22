@@ -128,12 +128,14 @@
 }
 
 
+
+
 .cards-container {
     display: grid;
     margin-left: 230px;
     padding-right: 60px;
     grid-template-columns: repeat(6, 1fr);
-    gap: 50px;
+    gap: 20px;
     height: 550px;
     margin-top: 10px;
     z-index: 1;
@@ -174,6 +176,7 @@
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.15);
     margin: 0 5px;
     height:400px;
+    width: 200px;
     white-space: normal;
     box-sizing: border-box;
 }
@@ -269,48 +272,48 @@
     display: inline-block;
     position: absolute;
     top: 100%;
-    right: 50px;
+    left: 50%;
     transform: translateX(-50%);
     background-color: var(--dim);
     color: #fff;
     padding: 2vh;
     border-radius: 2vh;
     font-size: 1vh;
-    width: 150px; /* adjust this as necessary */
+    width: 150px;
     white-space: nowrap;
     z-index: 999!important;
 }
 
 #sun_button:hover::before {
-    content: "Check out 24 Solar terms!";
+    content: "Check out 24 Solar terms";
     display: inline-block;
     position: absolute;
     top: 100%;
-    right: -280px;
+    left: 45%;
     transform: translateX(-50%);
     background-color: var(--dim);
     color: #fff;
     padding: 2vh;
     border-radius: 2vh;
     font-size: 1vh;
-    width: 150px; /* adjust this as necessary */
+    width: 185px; /* adjust this as necessary */
     white-space: nowrap;
     z-index: 999!important;
 }
 
 #moon_button:hover::before {
-    content: "Check out Moon Phases！";
+    content: "Check out Moon Phases";
     display: inline-block;
     position: absolute;
     top: 100%;
-    right: -280px;
+    left: 45%;
     transform: translateX(-50%);
     background-color: var(--dim);
     color: #fff;
     padding: 2vh;
     border-radius: 2vh;
     font-size: 1vh;
-    width: 150px; /* adjust this as necessary */
+    width: 175px; /* adjust this as necessary */
     white-space: nowrap;
     z-index: 999!important;
 }
